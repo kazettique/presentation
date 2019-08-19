@@ -1,0 +1,64 @@
+{
+  "greeting": "初めまして、私は<br>",
+  "name": "チャンハオハン <small>です</small>",
+  "full-name": "フルネーム：",
+
+  "title-education": "学歴",
+
+  "iii": "財団法人情報産業学院",
+  "iii-course": "ウェブデベロッパー養成コース",
+  "iii-location": "台湾，台北",
+  "iii-content": "<li>ウェブ開発の基礎</li><li>HTML、CSS、JavaScriptからして、JSフレームワークのNode.js、React.jsなども勉強しました</li>",
+
+  "jasso": "大阪日本語教育センター",
+  "jasso-course": "日本語学科",
+  "jasso-location": "日本，大阪",
+  "jasso-content": "<li>関西の大都市ー大阪で世界中の留学生と一緒に日本語を勉強しました</li><li>日本文化と地元生活の体験</li><li>日本橋にあるホビーショップでバイトしました</li>",
+
+  "ncku": "国立成功大学",
+  "ncku-major": "船舶工学部",
+  "ncku-location": "台湾，台南",
+  "ncku-content": "<li>船の設計を勉強しました</li>",
+
+  "title-work-experience": "職務経歴",
+
+  "soic-job": "エンジニア",
+  "soic": "財団法人船舶と海洋産業研究センター",
+  "soic-location": "台湾，台北",
+  "soic-content": "<li>機関配管の設計</li><li>軸糸の設計</li><li>3Dモデルの制作</li>",
+
+  "jungle-job": "梱包スタッフ",
+  "jungle-part-time": "（アルバイト）",
+  "jungle": "エンターテインメントホビーショップ ジャングル",
+  "jungle-location": "日本，大阪",
+  "jungle-content": "<li>通販の梱包や掃除など</li>",
+
+  "navy-job": "海軍一等兵",
+  "navy": "台湾海軍 蘭陽艦 FFG-935",
+  "navy-location": "台湾，宜蘭",
+  "navy-content": "<li>主機関室の装備操作、待機、メンテナンス</li>",
+
+  "title-my-projects": "作品集",
+  "project-li1": "<li><b>この</b>履歴書</li><li>The Wheel</li>",
+
+  "title-technical-skills": "技術",
+
+  "web-dev": "ウェブデベロッパー",
+  "software": "その他",
+
+  "languages": "語学力レベル",
+
+  "mandarin": "中国語",
+  "madarin-level": "母語",
+  "english": "英語",
+  "english-level": "中級者",
+  "english-cert": "TOEIC",
+
+  "japanese": "日本語",
+  "japanese-level": "中級者",
+  "japanese-cert": "日本語能力試験 N1",
+  "japanese-grade": "合格",
+
+  "spanish": "スペイン語",
+  "spanish-level": "初級者"
+}

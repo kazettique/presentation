@@ -1,0 +1,64 @@
+{
+  "greeting": "Hi, I'm",
+  "name": "Woody.",
+  "full-name": "Full Name: ",
+
+  "title-education": "EDUCATION",
+
+  "iii": "Institute for Information Industry",
+  "iii-course": "Front-End Engineer Web Developer Training Course",
+  "iii-location": "Taipei, Taiwan",
+  "iii-content": "<li >Learned the basis of web developing.</li><li>Started from HTML, CSS, JavaScript, and go on with Node.js, React.js ... etc.</li>",
+
+  "jasso": "Osaka Japanese Language Education Center (JASSO)",
+  "jasso-course": "Japanese Course",
+  "jasso-location": "Osaka, Japan",
+  "jasso-content": "<li>Learning Japanese in a big city, Osaka with classmates from around the world.</li><li>Experienced with Japanese culture and local life.</li><li>Got a part-time job at an hobby shop in Nipponbashi working with Japanese.</li>",
+
+  "ncku": "National Cheng Kung University (NCKU)",
+  "ncku-major": "Department of Systems and Naval Mechatronic Engineering",
+  "ncku-location": "Tainan, Taiwan",
+  "ncku-content": "<li>Learned the knowledge about ship building.</li>",
+
+  "title-work-experience": "WORK<br>EXPERIENCE",
+
+  "soic-job": "Naval Engineer",
+  "soic": "Ship and Ocean Industries R&D Center (SOIC)",
+  "soic-location": "Taipei, Taiwan",
+  "soic-content": "<li>Designed the piping system in machinery part.</li><li>Planned for shafting system.</li><li>Made 3D modeling of ship.</li>",
+
+  "jungle-job": "Product Packer",
+  "jungle-part-time": "(Part-Time)",
+  "jungle": "Entertainment Hobby Shop JUNGLE",
+  "jungle-location": "Osaka, Japan",
+  "jungle-content": "<li>Packing products for customer of online order.</li>",
+
+  "navy-job": "Seaman Apprentice",
+  "navy": "Lang Yang FFG-935, Taiwan Navy",
+  "navy-location": "Yilan, Taiwan",
+  "navy-content": "<li>Operated and supervised the machineries in main engine room.</li>",
+
+  "title-my-projects": "MY<br>PROJECTS",
+  "project-name": "<li>THIS résumé</li><li>The Wheel</li>",
+
+  "title-technical-skills": "TECHNICAL<br>SKILLS",
+
+  "web-dev": "Web Development",
+  "software": "Software",
+
+  "languages": "LANGUAGES",
+
+  "mandarin": "Mandarin",
+  "madarin-level": "Native",
+  "english": "English",
+  "english-level": "Proficient",
+  "english-cert": "TOEIC",
+
+  "japanese": "Japanese",
+  "japanese-level": "Proficient",
+  "japanese-cert": "JLPT N1",
+  "japanese-grade": "Pass",
+
+  "spanish": "Spanish",
+  "spanish-level": "Entry"
+}

@@ -1,0 +1,64 @@
+{
+  "greeting": "哈囉！我是 ",
+  "name": "張皓涵",
+  "full-name": "全名：",
+
+  "title-education": "學歷",
+
+  "iii": "財團法人資訊工業策進會",
+  "iii-course": "前端工程師就業養成班",
+  "iii-location": "台灣，台北",
+  "iii-content": "<li>學習網頁開發的基礎</li><li>從HTML、CSS、JavaScript開始，進一步學習JavaScript框架：Node.js、React.js等</li>",
+
+  "jasso": "大阪日本語教育中心",
+  "jasso-course": "日本語課程",
+  "jasso-location": "日本，大阪",
+  "jasso-content": "<li>在日本關西的大城市-大阪，與來自世界各地的留學生一起學習</li><li>體驗日本文化及當地的生活</li><li>在日本橋的模型店與日本人一起打工</li>",
+
+  "ncku": "國立成功大學",
+  "ncku-major": "系統暨船舶機電工程學系",
+  "ncku-location": "台灣，台南",
+  "ncku-content": "<li>學習船舶設計相關知識</li>",
+
+  "title-work-experience": "工作經歷",
+
+  "soic-job": "輪機工程師",
+  "soic": "財團法人船舶暨海洋產業研發中心",
+  "soic-location": "台灣，台北",
+  "soic-content": "<li>船艦輪機系統管路規劃及設計</li><li>船艦軸系佈置及規劃</li><li>3D船體模型建置</li>",
+
+  "jungle-job": "後場作業員",
+  "jungle-part-time": "（計時人員）",
+  "jungle": "密林 JUNGLE",
+  "jungle-location": "日本，大阪",
+  "jungle-content": "<li>後場包裝作業及店內雜務</li>",
+
+  "navy-job": "海軍一等兵",
+  "navy": "中華民國海軍 蘭陽軍艦 FFG-935",
+  "navy-location": "台灣，宜蘭",
+  "navy-content": "<li>主機艙的裝備操作、監控及保養</li>",
+
+  "title-my-projects": "作品集",
+  "project-li1": "<li><b>此</b>履歷</li><li>The Wheel</li>",
+
+  "title-technical-skills": "技能",
+
+  "web-dev": "網頁開發",
+  "software": "其他",
+
+  "languages": "語言",
+
+  "mandarin": "中文",
+  "madarin-level": "母語",
+  "english": "英語",
+  "english-level": "中等",
+  "english-cert": "多益",
+
+  "japanese": "日語",
+  "japanese-level": "中等",
+  "japanese-cert": "日語檢定 N1",
+  "japanese-grade": "合格",
+
+  "spanish": "西班牙語",
+  "spanish-level": "入門"
+}
