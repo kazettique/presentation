@@ -13,9 +13,6 @@ jQuery(function($) {
       // console.log(id_name);
       $(`#${id_name}`).html($.i18n(id_name));
     }
-    // $("#greeting").text($.i18n("greeting"));
-    // $("#name").text($.i18n("name"));
-    // $("#title-education").text($.i18n("title-education"));
   };
 
   // Loading translation json files
@@ -27,9 +24,8 @@ jQuery(function($) {
     })
     .done(function() {
       $(".locale-btns").on("click", "button", function(e) {
-        // console.log('click')
         e.preventDefault();
-        console.log($(this).data("locale"));
+        // console.log($(this).data("locale"));
         $.i18n().locale = $(this).data("locale");
         do_translate();
       });
@@ -41,4 +37,5 @@ jQuery(function($) {
   $.i18n({
     locale: "en"
   });
+  console.log(`my domain is: ${window.location.origin}`)
 });
