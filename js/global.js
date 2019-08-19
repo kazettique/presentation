@@ -21,9 +21,9 @@ jQuery(function($) {
   // Loading translation json files
   $.i18n()
     .load({
-      en: "http://127.0.0.1:5500/i18n/en.json",
-      "zh-tw": "http://127.0.0.1:5500/i18n/zh-tw.json",
-      jp: "http://127.0.0.1:5500/i18n/jp.json"
+      en: "http://kazettique.github.io/i18n/en.json",
+      "zh-tw": "http://kazettique.github.io/i18n/zh-tw.json",
+      jp: "http://kazettique.github.io/i18n/jp.json"
     })
     .done(function() {
       $(".locale-btns").on("click", "button", function(e) {
