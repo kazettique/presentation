@@ -1,37 +1,33 @@
-let enFont = 'Montserrat'
-let zhTwFont = 'Courier'
-let jaFont = 'M PLUS Rounded 1c'
+let enFont = "'Montserrat', sans-serif"
+let zhTwFont = "'Noto Sans TC', sans-serif"
+let jaFont = "'M PLUS Rounded 1c', sans-serif"
+let myLocale = localStorage.getItem('my-locale')
 
-// console.log(myLocale);
-
-const setEnFont = () => {
-  $('.container').css('font-family', enFont)
-  localStorage.setItem('my-locale', 'en')
-}
-
-const setZhTwFont = () => {
-  $('.container').css('font-family', zhTwFont)
-  localStorage.setItem('my-locale', 'zh-tw')
-}
-
-const setJaFont = () => {
-  $('.container').css('font-family', jaFont)
-  localStorage.setItem('my-locale', 'ja')
+const setFonts = (font, locale) => {
+  $('.container').css('font-family', font)
+  localStorage.setItem('my-locale', locale)
 }
 
 // set default font
+switch (myLocale) {
+  case 'zh-tw':
+    setFonts(zhTwFont, 'zh-tw')
+    break
+  case 'ja':
+    setFonts(jaFont, 'ja')
+    break
+  default:
+    setFonts(enFont, 'en')
+}
 
 $('.btn-en').click(function() {
-  setEnFont()
-  console.log('en!')
+  setFonts(enFont, 'en')
 })
 
 $('.btn-zh-tw').click(function() {
-  setZhTwFont()
-  console.log('zh-tw!')
+  setFonts(zhTwFont, 'zh-tw')
 })
 
 $('.btn-ja').click(function() {
-  setJaFont()
-  console.log('ja!')
+  setFonts(jaFont, 'ja')
 })

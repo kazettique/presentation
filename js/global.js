@@ -36,5 +36,5 @@ jQuery(function($) {
   }
   let myLocale = localStorage.getItem('my-locale')
   $.i18n().locale = myLocale
-  console.log($.i18n().locale)
+  // console.log($.i18n().locale)
 })
