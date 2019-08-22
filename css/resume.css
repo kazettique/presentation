@@ -4,6 +4,10 @@
   outline: 1px solid red;
 } */
 
+body {
+  background: #e2e1e0;
+}
+
 .container {
   max-width: 1080px;
   height: 100%;
@@ -20,36 +24,83 @@
     'title-4 content-4 content-4'
     'content-5 content-5 title-5'
     'footer footer footer';
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .content {
-  /* background: #ccc; */
-  /* background: rgb(182, 248, 207); */
-  background: rgb(141, 61, 61);
-  color: white;
+  /* background: #fffff6; */
+  background: #fffeee;
+  /* background: #fff; */
+  /* background: rgb(141, 61, 61); */
+  /* color: rgb(50, 51, 53);*/
+  color: #2c3e50;
+  /* color: white; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.content:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .title {
-  background: rgb(250, 246, 184);
-  font-size: 1.5rem;
-  font-weight: bold;
-  border: 5px solid rgb(141, 61, 61);
+  /* background: rgb(250, 246, 184); */
+  /* background: #fff; */
+  background: #fffff6;
+  /* background: rgba(0, 0, 0, 0); */
+
+  color: #4ca1af;
+  /* color: #2c3e50; */
+
+  font-size: 2.8rem;
+  font-weight: 400;
+  /* border: 5px solid rgb(141, 61, 61); */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.title:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .rounded-all {
-  border-radius: 1rem;
+  border-radius: 2px;
 }
 
 .transition {
-  transition: 0.8s;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+b {
+  font-weight: 600;
 }
 
 .banner {
-  background: rgb(50, 51, 53);
+  /* background: rgb(50, 51, 53); */
+  /* From uiGradients: Deep Sea Space */
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4ca1af,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4ca1af,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   grid-area: banner;
   height: 300px;
   display: flex;
+}
+
+.banner:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .blinking-cursor {
@@ -131,7 +182,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
 
-  padding: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   align-self: flex-end;
 }
@@ -141,7 +192,7 @@ a {
 }
 
 a:hover {
-  color: #ccc;
+  color: #4ca1af;
 }
 
 .content-1 {
@@ -155,11 +206,11 @@ a:hover {
   padding-left: 2rem;
 }
 
-.title-1 h2,
-.title-2 h2,
-.title-3 h2,
-.title-4 h2,
-.title-5 h2 {
+.title-1 p,
+.title-2 p,
+.title-3 p,
+.title-4 p,
+.title-5 p {
   align-self: center;
 }
 
@@ -208,7 +259,19 @@ a:hover {
 }
 
 .footer {
-  background: rgb(50, 51, 53);
+  /* background: rgb(50, 51, 53); */
+  /* From uiGradients: Deep Sea Space */
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4ca1af,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4ca1af,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
   grid-area: footer;
   text-align: center;
@@ -251,58 +314,65 @@ a:hover {
 
 .locale-menu {
   position: fixed;
-  top: 5px;
-  right: -100px;
+  top: 1rem;
+  right: -6.5rem;
+  /* right: 0px; */
+  font-family: 'Noto Sans TC', sans-serif;
+  /* padding-right: 5px; */
   display: flex;
   flex-direction: column;
-  font-family: 'Noto Sans TC', sans-serif;
+  z-index: 3;
 }
 
 .locale-menu:hover {
-  right: 5px;
+  right: 0px;
+}
+
+.locale-items {
+  /* border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+  background: #4ca1af;
+  align-self: flex-end;
 }
 
 .locale-item {
   width: 80px;
   height: 2rem;
 
-  color: #2e3d48;
-  background: #ccc;
+  color: #2c3e50;
+  background: #4ca1af;
   line-height: 2rem;
   text-align: center;
 
   padding: 0 1rem 0 1rem;
-  margin: 3px;
-  border-radius: 5px;
-
   cursor: pointer;
-
-  align-self: flex-end;
 }
 
 .locale-icon {
   width: 130px;
-  height: rem;
+  height: 2.3rem;
 
-  color: #2e3d48;
-  background: #ccc;
+  color: #2c3e50;
+  background: #4ca1af;
   line-height: 2rem;
   text-align: left;
 
-  padding: 0 1rem 0 1rem;
-  margin: 3px;
-  border-radius: 5px;
+  padding: 0 1rem 0 0.5rem;
+  /* border-radius: 2px; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
 
   cursor: pointer;
+  vertical-align: middle;
+  align-self: flex-end;
 }
 
 .fa-language {
   vertical-align: middle;
 }
 
-.locale-item:hover,
-.locale-icon:hover {
-  background: rgb(146, 146, 146);
+.locale-item:hover {
+  background: #2c3e50;
+  color: #fff;
 }
 
 .lang-icon:hover .locale-item {
@@ -310,7 +380,8 @@ a:hover {
 }
 
 .year {
-  color: rgb(138, 138, 138);
+  /* color: rgb(138, 138, 138); */
+  color: #4ca1af;
 }
 
 .lang,
@@ -346,6 +417,12 @@ a:hover {
 
 .devicon {
   font-size: 3rem;
+  transition: 0.5s;
+}
+
+.skill-list:hover .devicon,
+.skill-list:hover .skill-name {
+  color: #4ca1af;
 }
 
 .skill-icon {
@@ -354,4 +431,58 @@ a:hover {
 
 .skill-name {
   text-align: center;
+  transition: 0.5s;
+}
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  /* background-color: #f1f1f1; */
+  opacity: 0.8;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #e2e1e0;
+  /* border-bottom: 2px solid #fff; */
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4ca1af;
+  width: 0%;
+}
+
+/* Go to Top Button */
+.scrolltop {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0px;
+  /* left: 0px; */
+}
+.scroll {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #2c3e50;
+  background: #4ca1af;
+  /* background: rgba(178, 178, 178, 0.7); */
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.scroll:hover {
+  /* background: rgba(178, 178, 178, 1); */
+  color: #fff;
+  background: #2c3e50;
 }
