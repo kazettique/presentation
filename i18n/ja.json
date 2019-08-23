@@ -39,20 +39,25 @@
   "navy-content": "<li>主機関室の装備操作、待機、メンテナンス</li>",
 
   "title-my-projects": "作品集",
-  "project-li1": "<li><b>この</b>履歴書</li><li>The Wheel</li>",
+  "prj-title1": "私の履歴書",
+  "prj-comment1": "CSS GridやjQuery i18nなどで作りました",
+  "prj-title2": "The Wheel",
+  "prj-comment2": "ウェブデベロッパー養成コースでのチームプロジェクトで、React.js、Node.jsやmySQLなどを使いました",
 
   "title-technical-skills": "技術",
 
   "web-dev": "ウェブデベロッパー",
-  "software": "その他",
+  "software": "ソフトウェア",
 
   "languages": "語学力レベル",
 
   "mandarin": "中国語",
-  "madarin-level": "母語",
+  "mamdarin-level": "母語",
+  
   "english": "英語",
   "english-level": "中級者",
   "english-cert": "TOEIC",
+  "english-grade": "790",
 
   "japanese": "日本語",
   "japanese-level": "中級者",

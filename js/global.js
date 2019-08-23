@@ -5,7 +5,7 @@ jQuery(function($) {
     },
   })
 
-  // Translate all words
+  // Translate all words by getting all IDs
   const do_translate = function() {
     let x = document.querySelectorAll('*[id]:not([id=""])')
     for (let i = 0; i < x.length; i++) {
@@ -22,6 +22,7 @@ jQuery(function($) {
       ja: `${window.location.origin}/i18n/ja.json`,
     })
     .done(function() {
+      // Dynamic language conversion
       $('.locale-item').on('click', function(e) {
         e.preventDefault()
         $.i18n().locale = $(this).data('locale')

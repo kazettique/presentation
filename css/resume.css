@@ -179,7 +179,7 @@ b {
 }
 
 .contact {
-  color: #fff;
+  color: #fffeee;
   font-size: 1rem;
   line-height: 1.5rem;
 
@@ -189,7 +189,7 @@ b {
 }
 
 a {
-  color: #fff;
+  color: #fffeee;
 }
 
 a:hover {
@@ -273,7 +273,7 @@ a:hover {
     #4ca1af,
     #2c3e50
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #fff;
+  color: #fffeee;
   grid-area: footer;
   text-align: center;
   line-height: 3rem;
@@ -495,31 +495,30 @@ a:hover {
   width: 100%;
   height: 100%;
   /* background: #ccc; */
-  /* border: 1px solid red; */
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .project-item {
   width: 100%;
   height: 177px;
-  background: gray;
+  background: #4ca1af;
   position: relative;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: fill;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .project-item img {
-  /* height: 100%; */
+  height: auto;
   width: 100%;
 }
 
 .project-item .content-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -527,14 +526,14 @@ a:hover {
   top: 0;
   bottom: 0;
   right: 0;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
 
 .project-item:hover .content-overlay {
-  opacity: 1;
+  opacity: 0;
 }
 
 .content-image {
@@ -546,10 +545,10 @@ a:hover {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  width: 100%;
-  top: 50%;
+  width: 85%;
+  top: 80%;
   left: 50%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -559,24 +558,27 @@ a:hover {
 }
 
 .project-item:hover .content-details {
-  top: 50%;
+  top: 80%;
   left: 50%;
-  opacity: 1;
+  opacity: 0;
 }
 
-.content-details h3 {
-  color: #fff;
-  font-weight: 500;
+.content-details p:nth-child(1) {
+  color: #fffeee;
+  font-weight: 400;
+  font-size: 1.3rem;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
 
-.content-details p {
-  color: #fff;
-  font-size: 0.8em;
+.content-details p:nth-child(2) {
+  color: #fffeee;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
 }
 
 .fadeIn-bottom {
-  top: 80%;
+  top: 50%;
 }

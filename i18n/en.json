@@ -39,7 +39,10 @@
   "navy-content": "<li>Operated and supervised the machineries in main engine room.</li>",
 
   "title-my-projects": "MY<br>PROJECTS",
-  "project-name": "<li>THIS résumé</li><li>The Wheel</li>",
+  "prj-title1": "My Resume",
+  "prj-comment1": "Made with CSS Grid, jQuery i18n",
+  "prj-title2": "The Wheel",
+  "prj-comment2": "Team Project of From Front-End Course, made with React.js, Node.js, mySQL",
 
   "title-technical-skills": "TECHNICAL<br>SKILLS",
 
@@ -49,10 +52,12 @@
   "languages": "LANGUAGES",
 
   "mandarin": "Mandarin",
-  "madarin-level": "Native",
+  "mandarin-level": "Native",
+
   "english": "English",
   "english-level": "Proficient",
   "english-cert": "TOEIC",
+  "english-grade": "790",
 
   "japanese": "Japanese",
   "japanese-level": "Proficient",

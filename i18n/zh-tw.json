@@ -1,5 +1,5 @@
 {
-  "greeting": "哈囉！我是 ",
+  "greeting": "嗨！我是 ",
   "name": "張皓涵",
   "full-name": "姓名：",
 
@@ -39,20 +39,24 @@
   "navy-content": "<li>主機艙的裝備操作、監控及保養</li>",
 
   "title-my-projects": "作品集",
-  "project-li1": "<li><b>此</b>履歷</li><li>The Wheel</li>",
+  "prj-title1": "我的履歷",
+  "prj-comment1": "使用CSS Grid、jQuery i18n製作",
+  "prj-title2": "The Wheel",
+  "prj-comment2": "前端課程的小組專題，使用React.js、Node.js、mySQL等技術",
 
   "title-technical-skills": "技能",
 
   "web-dev": "網頁開發",
-  "software": "其他",
+  "software": "軟體",
 
   "languages": "語言",
 
   "mandarin": "中文",
-  "madarin-level": "母語",
+  "mamdarin-level": "母語",
   "english": "英語",
   "english-level": "中等",
-  "english-cert": "多益",
+  "english-cert": "TOEIC",
+  "english-grade": "790",
 
   "japanese": "日語",
   "japanese-level": "中等",
