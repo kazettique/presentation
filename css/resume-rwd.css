@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
   }
@@ -18,7 +18,7 @@
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
     grid-template-columns: 1fr;
@@ -58,7 +58,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
   }
@@ -83,7 +83,7 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: auto;
   }
