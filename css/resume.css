@@ -1,9 +1,3 @@
-/* * {
-  background: black;
-  color: green;
-  outline: 1px solid red;
-} */
-
 body {
   background: #e2e1e0;
 }
@@ -96,7 +90,16 @@ b {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   grid-area: banner;
   height: 300px;
-  display: flex;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    /* 'name name .' */
+    '. . .'
+    'name name .'
+    '. . contact';
+  gap: 0;
 }
 
 .banner:hover {
@@ -168,24 +171,28 @@ b {
 }
 
 .banner-title {
-  /* color: #fff; */
   color: #fffeee;
+  margin: 0;
 }
 
 .name-plate {
   font-size: 1.8rem;
   align-self: center;
-  margin-left: 3rem;
+  /* background: green; */
+  /* margin-left: 3rem; */
+  grid-area: name;
 }
 
 .contact {
   color: #fffeee;
+  /* background: orange; */
   font-size: 1rem;
   line-height: 1.5rem;
 
-  padding-right: 1rem;
-  margin-left: auto;
-  align-self: flex-end;
+  /* padding-right: 1rem; */
+  /* margin-left: auto; */
+  /* align-self: flex-end; */
+  grid-area: contact;
 }
 
 a {
@@ -310,10 +317,10 @@ a:hover {
   /* padding-right: 5px; */
   display: flex;
   flex-direction: column;
-  z-index: 3;
 }
 
-.locale-menu:hover {
+.locale-menu:hover,
+.locale-menu:active {
   right: 0px;
 }
 
@@ -322,6 +329,8 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
   background: #4ca1af;
   align-self: flex-end;
+  position: relative;
+  z-index: 3;
 }
 
 .locale-item {
@@ -353,6 +362,7 @@ a:hover {
   cursor: pointer;
   vertical-align: middle;
   align-self: flex-end;
+  z-index: 5;
 }
 
 .fa-language {
@@ -364,9 +374,20 @@ a:hover {
   color: #fff;
 }
 
-.lang-icon:hover .locale-item {
-  background: yellow;
-}
+/* .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+} */
+
+/* .mask-show {
+  visibility: show;
+} */
 
 .year {
   /* color: rgb(138, 138, 138); */
@@ -396,12 +417,17 @@ a:hover {
 }
 
 .skill {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-auto-rows: auto;
+  gap: 0;
+  text-align: center;
 }
 
 .skill-list {
   width: auto;
   margin: 0.5rem;
+  /* display: block; */
 }
 
 .devicon {
@@ -427,7 +453,7 @@ a:hover {
 .header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   /* background-color: #f1f1f1; */
   opacity: 0.8;
@@ -456,6 +482,7 @@ a:hover {
   position: fixed;
   bottom: 0px;
   /* left: 0px; */
+  z-index: 2;
 }
 
 .scroll {
@@ -482,7 +509,6 @@ a:hover {
 .project-container {
   width: 100%;
   height: 100%;
-  /* background: #ccc; */
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -493,16 +519,18 @@ a:hover {
 .project-item {
   width: 100%;
   height: 177px;
-  background: #4ca1af;
+  background: #fffeee;
   position: relative;
   overflow: hidden;
-  object-fit: fill;
+  /* object-fit: stretch; */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .project-item img {
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .project-item .content-overlay {

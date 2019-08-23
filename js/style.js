@@ -64,3 +64,15 @@ $(function() {
     return false
   })
 })
+
+// Locale menu hover overlay mask
+// $('.locale-menu').hover(
+//   function() {
+//     console.log('in')
+//     $('.mask').show()
+//   },
+//   function() {
+//     console.log('out')
+//     $('.mask').css('visibility', 'show')
+//   }
+// )

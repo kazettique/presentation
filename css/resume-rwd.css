@@ -1,0 +1,112 @@
+@media only screen and (max-width: 1080px) {
+  .container {
+    width: 95vw;
+  }
+
+  .banner {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'name name name .'
+      /* '. . . .' */
+      '. . contact contact';
+  }
+
+  .contact {
+    margin-top: auto;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 95vw;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      'banner'
+      'title-1'
+      'content-1'
+      'title-2'
+      'content-2'
+      'title-3'
+      'content-3'
+      'title-4'
+      'content-4'
+      'title-5'
+      'content-5'
+      'footer';
+    gap: 1rem;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .banner {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      'name name name . '
+      '. . . .'
+      '. .  contact contact';
+  }
+
+  .skill {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 95vw;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'name'
+      'contact';
+    gap: 0;
+    padding: 0.5rem;
+  }
+
+  .skill {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: auto;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .banner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'name'
+      'contact';
+    gap: 0;
+    padding: 0.2rem;
+  }
+  .name-plate {
+    text-align: center;
+  }
+
+  .skill {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <!-- My Stylesheet -->
   <link rel="stylesheet" href="../css/resume.css">
+  <link rel="stylesheet" href="../css/resume-rwd.css">
   <!-- FontAwesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   <!-- Devicon -->
@@ -24,8 +25,11 @@
 </head>
 
 <body>
+  <!-- Locale menu overlay mask -->
+  <!-- <div class="mask transition"></div> -->
   <!-- Locale menu -->
   <div class="locale-menu transition">
+
     <div class="locale-icon transition"><i class="fas fa-language fa-2x"></i></div>
     <div class="locale-items">
       <div class="locale-item transition btn-en" data-locale="en">English</div>
@@ -49,8 +53,9 @@
   <div class="container">
     <div class="banner rounded-all">
       <div class="name-plate">
-        <h1 class="banner-title"><small class="greeting" id="greeting"></small> <span class="name"
-            id="name"></span><span class="blinking-cursor">|</span>
+        <h1 class="banner-title">
+          <small class="greeting" id="greeting"></small> <span class="name" id="name"></span><span
+            class="blinking-cursor">|</span>
         </h1>
       </div>
       <div class="contact">
@@ -152,15 +157,17 @@
             <div class="content-overlay"></div>
             <img class="content-img" src="../img/the-wheel.png">
             <div class="content-details fadeIn-bottom">
-              <p class="content-title" id="prj-title2"></h>
-              <p class="content-text" id="prj-comment2"></p>
+              <p class="content-title" id="prj-title2">
+                </h>
+                <p class="content-text" id="prj-comment2"></p>
             </div>
           </a>
         </div>
         <div class="project-item">
           <a href="#" target="_blank">
             <div class="content-overlay"></div>
-            <img class="content-img" src="https://images.unsplash.com/photo-1496080174650-637e3f22fa03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1606&q=80">
+            <img class="content-img"
+              src="https://images.unsplash.com/photo-1496080174650-637e3f22fa03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1606&q=80">
             <div class="content-details fadeIn-bottom">
               <p class="content-title" id="">Campside</p>
               <p class="content-text" id="">Embrace the natural through camping</p>
@@ -170,7 +177,8 @@
         <div class="project-item">
           <a href="#" target="_blank">
             <div class="content-overlay"></div>
-            <img class="content-img" src="https://images.unsplash.com/photo-1500520198921-6d4704f98092?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80">
+            <img class="content-img"
+              src="https://images.unsplash.com/photo-1500520198921-6d4704f98092?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80">
             <div class="content-details fadeIn-bottom">
               <p class="content-title" id="">Enjoy the beach</p>
               <p class="content-text" id="">Surfing all day long!</p>
@@ -225,8 +233,6 @@
             jQuery
           </div>
         </div>
-      </div>
-      <div class="skill">
         <div class="skill-list">
           <div class="skill-icon">
             <i class="devicon-nodejs-plain devicon"></i>
