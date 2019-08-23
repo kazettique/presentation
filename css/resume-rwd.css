@@ -85,11 +85,14 @@
 
 /* @media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2)  */
 @media only screen and (-webkit-min-device-pixel-ratio: 3),
-  only screen and (min--moz-device-pixel-ratio: 3),
+  only screen and (-moz-min-device-pixel-ratio: 3),
   only screen and (-o-min-device-pixel-ratio: 3/1),
   only screen and (min-device-pixel-ratio: 3),
   only screen and (min-resolution: 458dpi),
   only screen and (min-resolution: 3dppx) {
+  body {
+    font-size: 64px;
+  }
   .container {
     width: auto;
   }
