@@ -51,6 +51,8 @@
 
   "languages": "語言",
 
+  "cert-header": "語言檢定測驗",
+
   "mandarin": "中文",
   "mamdarin-level": "母語",
   "english": "英語",

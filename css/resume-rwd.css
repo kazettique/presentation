@@ -39,10 +39,10 @@
     gap: 1rem;
   }
 
-  .project-container {
+  /* .project-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-  }
+  } */
 
   .banner {
     grid-template-columns: repeat(4, 1fr);
@@ -63,10 +63,10 @@
     width: 95vw;
   }
 
-  .project-container {
+  /* .project-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-  }
+  } */
 
   .banner {
     grid-template-columns: 1fr;
@@ -83,7 +83,7 @@
   }
 }
 
-@media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2) {
   /* @media only screen and (-webkit-min-device-pixel-ratio: 3),
   only screen and (-moz-min-device-pixel-ratio: 3),
   only screen and (-o-min-device-pixel-ratio: 3/1),
@@ -98,7 +98,8 @@
   }
 
   .project-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    /* grid-auto-rows: auto; */
     gap: 1rem;
   }
 

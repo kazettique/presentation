@@ -50,6 +50,8 @@
   "software": "Software",
 
   "languages": "LANGUAGES",
+  
+  "cert-header": "Certification",
 
   "mandarin": "Mandarin",
   "mandarin-level": "Native",
