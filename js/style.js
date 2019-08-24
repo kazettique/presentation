@@ -65,14 +65,19 @@ $(function() {
   })
 })
 
-// Locale menu hover overlay mask
-// $('.locale-menu').hover(
-//   function() {
-//     console.log('in')
-//     $('.mask').show()
-//   },
-//   function() {
-//     console.log('out')
-//     $('.mask').css('visibility', 'show')
-//   }
-// )
+// Locale menu for mobile device
+$('.locale-icon-mobile').click(function() {
+  $(this).toggleClass('active')
+  $('.locale-items-mobile').toggleClass('show')
+})
+
+$('.container, .locale-items-mobile').click(function() {
+  $('.locale-items-mobile').removeClass('show')
+  $('.locale-icon-mobile').removeClass('active')
+})
+
+$('.scroll').click(function(){
+  $(this).css('color','#2c3e50')
+  $(this).css('background','#4ca1af')
+})
+

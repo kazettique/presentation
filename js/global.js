@@ -23,7 +23,7 @@ jQuery(function($) {
     })
     .done(function() {
       // Dynamic language conversion
-      $('.locale-item').on('click', function(e) {
+      $('.locale-item, .locale-item-mobile').on('click', function(e) {
         e.preventDefault()
         $.i18n().locale = $(this).data('locale')
         do_translate()

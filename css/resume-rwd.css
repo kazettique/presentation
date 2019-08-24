@@ -53,6 +53,14 @@
       '. .  contact contact';
   }
 
+  .locale-menu {
+    display: none;
+  }
+
+  .locale-menu-mobile {
+    display: block;
+  }
+
   .skill {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -90,9 +98,6 @@
   only screen and (min-device-pixel-ratio: 3),
   only screen and (min-resolution: 458dpi),
   only screen and (min-resolution: 3dppx) { */
-  body {
-    /* font-size: 64px; */
-  }
   .container {
     width: auto;
   }
@@ -118,5 +123,50 @@
 
   .skill {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 32px;
+  }
+
+  .contact {
+    margin: auto auto 0 auto;
+    font-size: 1.2rem;
+  }
+
+  .locale-icon-mobile {
+    width: 120vw;
+    height: 4rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .container {
+    top: 2.3rem;
+  }
+
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-5 {
+    grid-template-columns: 1fr;
+    font-size: 24px;
+  }
+
+  .lang-list,
+  .lang-level {
+    width: 9.25rem;
+  }
+
+  .cert-header {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  .footer {
+    font-size: 1rem;
   }
 }

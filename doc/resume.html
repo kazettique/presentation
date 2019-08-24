@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Woody's Resume</title>
   <!-- Normalize CSS -->
@@ -25,16 +25,25 @@
 </head>
 
 <body>
-  <!-- Locale menu overlay mask -->
-  <!-- <div class="mask transition"></div> -->
   <!-- Locale menu -->
   <div class="locale-menu transition">
-
     <div class="locale-icon transition"><i class="fas fa-language fa-2x"></i></div>
     <div class="locale-items">
       <div class="locale-item transition btn-en" data-locale="en">English</div>
       <div class="locale-item transition btn-zh-tw" data-locale="zh-tw">中文</div>
       <div class="locale-item transition btn-ja" data-locale="ja">日本語</div>
+    </div>
+  </div>
+
+  <!-- Locale menu for mobile device -->
+  <div class="locale-menu-mobile">
+    <div class="locale-icon-mobile transition">
+      <i class="fas fa-language fa-2x open-btn"></i>
+    </div>
+    <div class="locale-items-mobile">
+      <div class="locale-item-mobile btn-en" data-locale="en">English</div>
+      <div class="locale-item-mobile btn-zh-tw" data-locale="zh-tw">中文</div>
+      <div class="locale-item-mobile btn-ja" data-locale="ja">日本語</div>
     </div>
   </div>
 
