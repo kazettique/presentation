@@ -128,23 +128,39 @@
 
 @media only screen and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
-    font-size: 32px;
+    font-size: 18px;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
   }
 
   .contact {
     margin: auto auto 0 auto;
-    font-size: 1.2rem;
+    /* font-size: 1rem; */
   }
 
   .locale-icon-mobile {
-    width: 500vw;
-    height: 4rem;
+    /* width: 100vw; */
+    width: 24.5rem;
+    height: 3rem;
     text-align: left;
     padding-left: 1rem;
   }
 
+  .locale-item-mobile {
+    margin: 0 auto;
+    padding: 1rem 0 1rem 0;
+    /* height: 3rem; */
+  }
+
   .container {
-    top: 2.3rem;
+    top: 1.3rem;
   }
 
   .skill {
@@ -159,14 +175,14 @@
   .lang-list,
   .lang-level {
     width: 9.25rem;
+    font-size: 1rem;
   }
 
   .cert-header {
-    font-size: 2.2rem;
     margin-top: 2rem;
   }
 
-  .footer {
+  .cert-title {
     font-size: 1rem;
   }
 }
