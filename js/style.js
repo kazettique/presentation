@@ -66,14 +66,17 @@ $(function() {
 })
 
 // Locale menu for mobile device
-$('.locale-icon-mobile').click(function() {
-  $(this).toggleClass('active')
+$('.open-btn').click(function() {
+  // $(this).toggleClass('active')
+  $('.locale-icon-mobile').toggleClass('active')
+  $('.fa-envelope').toggleClass('active')
   $('.locale-items-mobile').toggleClass('show')
 })
 
 $('.container, .locale-items-mobile').click(function() {
-  $('.locale-items-mobile').removeClass('show')
   $('.locale-icon-mobile').removeClass('active')
+  $('.fa-envelope').removeClass ('active')
+  $('.locale-items-mobile').removeClass('show')
 })
 
 $('.scroll').click(function(){

@@ -146,17 +146,42 @@
   }
 
   .locale-icon-mobile {
-    /* width: 100vw; */
-    width: 24.5rem;
+    /* width: 100%; */
+    width: 24.6rem;
     height: 3rem;
     text-align: left;
     padding-left: 1rem;
   }
 
   .locale-item-mobile {
+    width: 100%;
     margin: 0 auto;
     padding: 1rem 0 1rem 0;
     /* height: 3rem; */
+  }
+
+  .locale-icon-mobile {
+    display: flex;
+    padding: 0;
+    line-height: 3rem;
+  }
+
+  .open-btn {
+    align-self: center;
+    padding-left: 1rem;
+  }
+
+  .navbar-mail-mobile {
+    display: block;
+    align-self: center;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+
+  .navbar-title-mobile {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
   }
 
   .container {
@@ -184,5 +209,9 @@
 
   .cert-title {
     font-size: 1rem;
+  }
+
+  .blinking-cursor {
+    font-size: 2rem;
   }
 }

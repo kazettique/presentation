@@ -396,7 +396,20 @@ a:hover {
 .active {
   background: #2c3e50;
   color: #fffeee;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+}
+
+.navbar-title-mobile,
+.navbar-mail-mobile {
+  display: none;
+}
+
+.navbar-title-mobile {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.navbar-mail-mobile {
+  color: #2c3e50;
 }
 
 .fa-language {
