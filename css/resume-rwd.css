@@ -3,6 +3,21 @@
   zoom: 1;
 }
 
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+@-moz-viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+@-ms-viewport {
+  width: device-width;
+  zoom: 1;
+}
+
 @media only screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
