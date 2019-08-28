@@ -1,23 +1,3 @@
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
-
-@-webkit-viewport {
-  width: device-width;
-  zoom: 1;
-}
-
-@-moz-viewport {
-  width: device-width;
-  zoom: 1;
-}
-
-@-ms-viewport {
-  width: device-width;
-  zoom: 1;
-}
-
 @media only screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
@@ -146,9 +126,13 @@
   }
 }
 
-@media only screen and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 1) {
   body {
     font-size: 18px;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .banner-title {
