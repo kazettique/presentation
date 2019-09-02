@@ -13,12 +13,12 @@
   "jasso": "Osaka Japanese Language Education Center (JASSO)",
   "jasso-course": "Japanese Course",
   "jasso-location": "Osaka, Japan",
-  "jasso-content": "<li>Learning Japanese in a big city, Osaka with classmates from around the world.</li><li>Experienced with Japanese culture and local life.</li><li>Got a part-time job at an hobby shop in Nipponbashi working with Japanese.</li>",
+  "jasso-content": "<li>Learning Japanese in a big city, Osaka with classmates from around the world.</li><li>Experienced with Japanese culture and local life.</li>Got contact with local people, refined Japanese skill, got JLPT N1.<li>Got a part-time job at an hobby shop in Nipponbashi working with Japanese.</<li>",
 
   "ncku": "National Cheng Kung University (NCKU)",
   "ncku-major": "Department of Systems and Naval Mechatronic Engineering",
   "ncku-location": "Tainan, Taiwan",
-  "ncku-content": "<li>Learned the knowledge about ship building.</li>",
+  "ncku-content": "<li>Learned FORTRAN and C</li><li>Used VBA to analyze the ship hull, and made a graph to present it</li><li>Learned the knowledge about ship building.</li>",
 
   "title-work-experience": "WORK<br>EXPERIENCE",
 
@@ -27,11 +27,10 @@
   "soic-location": "Taipei, Taiwan",
   "soic-content": "<li>Designed the piping system in machinery part.</li><li>Planned for shafting system.</li><li>Made 3D modeling of ship.</li>",
 
-  "jungle-job": "Product Packer",
-  "jungle-part-time": "(Part-Time)",
+  "jungle-job": "Part-Time",
   "jungle": "Entertainment Hobby Shop JUNGLE",
   "jungle-location": "Osaka, Japan",
-  "jungle-content": "<li>Packed products for customer of online order.</li>",
+  "jungle-content": "<li>Worked with Japanese staffs.</li><li>Interpreted for foreign customers.</li><li>Packed products for online orders.</li>",
 
   "navy-job": "Seaman Apprentice",
   "navy": "Lang Yang FFG-935, Taiwan Navy",
@@ -43,6 +42,8 @@
   "prj-comment1": "Made with CSS Grid, jQuery i18n",
   "prj-title2": "The Wheel",
   "prj-comment2": "Team Project of Front-End Course, made with React.js, Node.js, mySQL",
+  "prj-title3": "Under Construction",
+  "prj-comment3": "Work, work!",
 
   "title-technical-skills": "TECHNICAL<br>SKILLS",
 
@@ -50,7 +51,7 @@
   "software": "Software",
 
   "languages": "LANGUAGES",
-  
+
   "cert-header": "Certification",
 
   "mandarin": "Mandarin",

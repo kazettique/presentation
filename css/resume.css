@@ -115,7 +115,6 @@ b {
     color: transparent;
   }
   50% {
-    /* color: black; */
     color: #fffeee;
   }
 }
@@ -126,7 +125,6 @@ b {
     color: transparent;
   }
   50% {
-    /* color: black; */
     color: #fffeee;
   }
 }
@@ -137,7 +135,6 @@ b {
     color: transparent;
   }
   50% {
-    /* color: black; */
     color: #fffeee;
   }
 }
@@ -186,6 +183,10 @@ a {
 
 a:hover {
   color: #4ca1af;
+}
+
+li {
+  line-height: 2rem;
 }
 
 .content-1 {
@@ -612,14 +613,6 @@ a:hover {
   background-image: url('../img/the-wheel.png');
 }
 .card-img-3 {
-  background-image: url('https://images.unsplash.com/photo-1414016642750-7fdd78dc33d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80');
-}
-
-.card-img-4 {
-  background-image: url('https://images.unsplash.com/photo-1500520198921-6d4704f98092?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80');
-}
-
-.card-img-5 {
   background-image: url('https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80');
 }
 

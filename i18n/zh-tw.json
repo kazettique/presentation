@@ -13,12 +13,12 @@
   "jasso": "大阪日本語教育中心",
   "jasso-course": "日本語課程",
   "jasso-location": "日本，大阪",
-  "jasso-content": "<li>在日本關西的大城市-大阪，與來自世界各地的留學生一起學習</li><li>體驗日本文化及當地的生活</li><li>在日本橋的模型店與日本人一起打工</li>",
+  "jasso-content": "<li>在日本關西的大城市-大阪，與來自世界各地的留學生一起學習</li><li>體驗日本文化及當地的生活</li><li>多接觸當地人，使日語進步，並取得日檢N1</li><li>在日本橋的模型店與日本人一起打工</li>",
 
   "ncku": "國立成功大學",
   "ncku-major": "系統暨船舶機電工程學系",
   "ncku-location": "台灣，台南",
-  "ncku-content": "<li>學習船舶設計相關知識</li>",
+  "ncku-content": "<li>大學期間學習過FORTRAN, C</li><li>船舶必修課程利用VBA做船體分析及圖表呈現</li><li>學習船舶設計相關知識</li>",
 
   "title-work-experience": "工作經歷",
 
@@ -27,11 +27,10 @@
   "soic-location": "台灣，台北",
   "soic-content": "<li>船艦輪機系統管路規劃及設計</li><li>船艦軸系佈置及規劃</li><li>3D船體模型建置</li>",
 
-  "jungle-job": "後場作業員",
-  "jungle-part-time": "（計時人員）",
+  "jungle-job": "打工",
   "jungle": "密林 JUNGLE",
   "jungle-location": "日本，大阪",
-  "jungle-content": "<li>後場包裝作業及店內雜務</li>",
+  "jungle-content": "<li>與日本人溝通合作完成店內事務</li><li>外國遊客之中文及英文翻譯</li><li>後場包裝作業及店內雜務</li>",
 
   "navy-job": "海軍一等兵",
   "navy": "中華民國海軍 蘭陽軍艦 FFG-935",
@@ -43,6 +42,8 @@
   "prj-comment1": "使用CSS Grid、jQuery i18n製作",
   "prj-title2": "The Wheel",
   "prj-comment2": "前端課程的小組專題，使用React.js、Node.js、mySQL等技術",
+  "prj-title3": "世界奇觀建造中",
+  "prj-comment3": "請給我木材！",
 
   "title-technical-skills": "技能",
 

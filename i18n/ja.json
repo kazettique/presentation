@@ -13,12 +13,12 @@
   "jasso": "大阪日本語教育センター",
   "jasso-course": "日本語学科",
   "jasso-location": "日本，大阪",
-  "jasso-content": "<li>関西の大都市ー大阪で世界中の留学生と一緒に日本語を勉強しました</li><li>日本文化と地元生活の体験</li><li>日本橋にあるホビーショップでバイトしました</li>",
+  "jasso-content": "<li>関西の大都市ー大阪で世界中の留学生と一緒に日本語を勉強しました</li><li>日本文化と地元生活の体験</li><li>地元の人によく交流して、日本語を身につけて、日本語能力試験N1を取った</li><li>日本橋にあるホビーショップでバイトしました</li>",
 
   "ncku": "国立成功大学",
   "ncku-major": "船舶工学部",
   "ncku-location": "台湾，台南",
-  "ncku-content": "<li>船の設計を勉強しました</li>",
+  "ncku-content": "<li>FORTRANとC言語を勉強しました/li><li>VBAで船体のスピートを分析しました</li><li>船の設計を習いました</li>",
 
   "title-work-experience": "職務経歴",
 
@@ -27,11 +27,10 @@
   "soic-location": "台湾，台北",
   "soic-content": "<li>機関配管の設計</li><li>軸糸の設計</li><li>3Dモデルの制作</li>",
 
-  "jungle-job": "梱包スタッフ",
-  "jungle-part-time": "（アルバイト）",
+  "jungle-job": "アルバイト",
   "jungle": "エンターテインメントホビーショップ ジャングル",
   "jungle-location": "日本，大阪",
-  "jungle-content": "<li>通販の梱包や掃除など</li>",
+  "jungle-content": "<li>日本人スタッフと一緒に職務を遂行する</li><li>外国のお客さんに通訳する</li><li>通販の梱包や掃除など</li>",
 
   "navy-job": "海軍一等兵",
   "navy": "台湾海軍 蘭陽艦 FFG-935",
@@ -43,6 +42,8 @@
   "prj-comment1": "CSS GridやjQuery i18nなどで作りました",
   "prj-title2": "The Wheel",
   "prj-comment2": "ウェブデベロッパー養成コースでのチームプロジェクトで、React.js、Node.jsやmySQLなどを使いました",
+  "prj-title3": "構築中",
+  "prj-comment3": "ツールを集めよう！",
 
   "title-technical-skills": "技術",
 
