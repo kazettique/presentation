@@ -185,8 +185,8 @@ a:hover {
   color: #4ca1af;
 }
 
-li {
-  line-height: 2rem;
+ul {
+  line-height: 1.8rem;
 }
 
 .content-1 {
