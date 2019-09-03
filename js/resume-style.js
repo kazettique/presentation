@@ -75,12 +75,16 @@ $('.open-btn').click(function() {
 
 $('.container, .locale-items-mobile').click(function() {
   $('.locale-icon-mobile').removeClass('active')
-  $('.fa-envelope').removeClass ('active')
+  $('.fa-envelope').removeClass('active')
   $('.locale-items-mobile').removeClass('show')
 })
 
-$('.scroll').click(function(){
-  $(this).css('color','#2c3e50')
-  $(this).css('background','#4ca1af')
+$('.scroll').click(function() {
+  $(this).css('color', '#2c3e50')
+  $(this).css('background', '#4ca1af')
 })
 
+// Print button
+function printIt() {
+  window.print()
+}

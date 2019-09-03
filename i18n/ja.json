@@ -2,6 +2,8 @@
   "greeting": "初めまして、私は<br>",
   "name": "チャンハオハン <small>です</small>",
   "full-name": "フルネーム：",
+  "qrCode-txt": "スキャンして！",
+  "printMsg":"このページをプリントしよう！",
 
   "title-education": "学歴",
 
@@ -40,8 +42,10 @@
   "title-my-projects": "作品集",
   "prj-title1": "私の履歴書",
   "prj-comment1": "CSS GridやjQuery i18nなどで作りました",
+  "prj-comment1-print": "自分の経験、学歴などをサイトで示します。jQuery i18nで多言語対応のサイトを作りました。",
   "prj-title2": "The Wheel",
   "prj-comment2": "ウェブデベロッパー養成コースでのチームプロジェクトで、React.js、Node.jsやmySQLなどを使いました",
+  "prj-comment2-print": "サイクリングの世界へ！サイクリングのニュースや商品など、他にもあります！",
   "prj-title3": "構築中",
   "prj-comment3": "ツールを集めよう！",
 

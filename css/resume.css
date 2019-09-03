@@ -175,6 +175,11 @@ b {
   font-size: 1rem;
   line-height: 1.5rem;
   grid-area: contact;
+  display: block;
+}
+
+.qrCode {
+  display: none;
 }
 
 a {
@@ -261,7 +266,7 @@ ul {
   background: #2c3e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #4ca1af, #2c3e50);
   background: linear-gradient(to left, #4ca1af, #2c3e50);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(85, 85, 85, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: #fffeee;
   grid-area: footer;
@@ -535,7 +540,6 @@ ul {
   bottom: 10px;
   color: #2c3e50;
   background: #4ca1af;
-  /* background: rgba(178, 178, 178, 0.7); */
   padding: 5px 10px 5px 10px;
   text-align: center;
   margin: 0 0 0 0;
@@ -543,10 +547,86 @@ ul {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.scroll:hover {
-  /* background: rgba(178, 178, 178, 1); */
+.scroll:hover,
+.printBtn:hover {
   color: #fffeee;
   background: #2c3e50;
+}
+
+.printBlock {
+  position: relative;
+}
+
+.printBtn {
+  display: block;
+  position: fixed;
+  left: 10px;
+  top: 1rem;
+  color: #2c3e50;
+  background: #4ca1af;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 2;
+}
+
+.printBlock:hover .printMsg {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Transition with display property: https://stackoverflow.com/questions/3331353/transitions-on-the-display-property */
+.printMsg {
+  position: relative;
+  background: #4ca1af;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/* Thanks, Rajesh DN! - https://codingislove.com/css-speech-bubbles/ */
+.box2 {
+  width: auto;
+  margin: 50px auto;
+  border: 4px solid #e2e1e0;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fffeee;
+  font-family: arial;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+}
+
+.sb10:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #e2e1e0;
+  left: 15%;
+  top: -23px;
+}
+
+.sb10:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #4ca1af;
+  left: 15%;
+  top: -18px;
 }
 
 /* My projects grid */
@@ -627,4 +707,8 @@ ul {
 .card-comment {
   margin: 0.5rem 0 1rem 0;
   transition: 0.5s;
+}
+
+.card-comment-print {
+  display: none;
 }

@@ -1,7 +1,9 @@
 {
-  "greeting": "Hi, I'm",
-  "name": "Woody.",
+  "greeting": "Howdy! I'm",
+  "name": "Woody!",
   "full-name": "Full Name: ",
+  "qrCode-txt": "Scan It!",
+  "printMsg":"Print this page!",
 
   "title-education": "EDUCATION",
 
@@ -13,7 +15,7 @@
   "jasso": "Osaka Japanese Language Education Center (JASSO)",
   "jasso-course": "Japanese Course",
   "jasso-location": "Osaka, Japan",
-  "jasso-content": "<li>Learning Japanese in a big city, Osaka with classmates from around the world.</li><li>Experienced with Japanese culture and local life.</li>Got contact with local people, refined Japanese skill, got JLPT N1.<li>Got a part-time job at an hobby shop in Nipponbashi working with Japanese.</<li>",
+  "jasso-content": "<li>Learning Japanese in a big city, Osaka with classmates from around the world.</li><li>Experienced with Japanese culture and local life.</li><li>Got contact with local people, refined Japanese skill, got JLPT N1.</li><li>Got a part-time job at an hobby shop in Nipponbashi working with Japanese.</<li>",
 
   "ncku": "National Cheng Kung University (NCKU)",
   "ncku-major": "Department of Systems and Naval Mechatronic Engineering",
@@ -40,8 +42,10 @@
   "title-my-projects": "MY<br>PROJECTS",
   "prj-title1": "My Resume",
   "prj-comment1": "Made with CSS Grid, jQuery i18n",
+  "prj-comment1-print": "To present my profile what I've experienced in the past time. Using jQuery i18n to provide multilingual page.",
   "prj-title2": "The Wheel",
   "prj-comment2": "Team Project of Front-End Course, made with React.js, Node.js, mySQL",
+  "prj-comment2-print": "Dive in the cycling world! A site with cycling news, bicycle products and more!",
   "prj-title3": "Under Construction",
   "prj-comment3": "Work, work!",
 

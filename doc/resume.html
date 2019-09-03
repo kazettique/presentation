@@ -9,8 +9,10 @@
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="/css/normalize.css">
   <!-- My Stylesheet -->
-  <link rel="stylesheet" href="/css/resume.css">
-  <link rel="stylesheet" href="/css/resume-rwd.css">
+  <!-- <link rel="stylesheet" href="/css/resume.css"> -->
+  <link rel="stylesheet" media="screen" href="/css/resume-rwd.css">
+  <link rel="stylesheet" media="print" href="/css/resume-print.css">
+  <link rel="stylesheet" media="screen" href="/css/resume.css">
   <!-- FontAwesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   <!-- Devicon -->
@@ -61,6 +63,12 @@
     <div class='scroll icon rounded-all transition'><i class="fa fa-2x fa-angle-up"></i></div>
   </div>
 
+  <!-- Print button -->
+  <div class='printBlock'>
+    <div class='printBtn icon rounded-all transition'><i class="fa fa-2x fa-print" onclick="printIt()"></i></div>
+    <div class="box2 sb10 rounded-all printMsg" id="printMsg">Print Me!</div>
+  </div>
+
   <div class="container">
     <div class="banner rounded-all">
       <div class="name-plate">
@@ -82,6 +90,7 @@
               class="transition">https://github.com/kazettique</a>
           </li>
         </ul>
+        <div class="qrCode"><img src="/img/resume-qrcode.svg" alt=""><br><b id="qrCode-txt"></b></div>
       </div>
     </div>
     <div class="title rounded-all title-1">
@@ -96,7 +105,7 @@
           <span id="iii-course"></span><br>
           <small><span id="iii-location"></span></small>
         </p>
-        <ul id="iii-content"></ul>
+        <ul class="edu-content-list" id="iii-content"></ul>
       </div>
       <div>
         <h3>
@@ -106,7 +115,7 @@
           <span id="jasso-course"></span><br>
           <small><span id="jasso-location"></span></small>
         </p>
-        <ul id="jasso-content"></ul>
+        <ul class="edu-content-list" id="jasso-content"></ul>
       </div>
       <div>
         <h3><span id="ncku"></span> <small class="year">2008-2012</small>
@@ -115,7 +124,7 @@
           <span id="ncku-major"></span><br>
           <small><span id="ncku-location"></span></small>
         </p>
-        <ul id="ncku-content"></ul>
+        <ul class="edu-content-list" id="ncku-content"></ul>
       </div>
     </div>
     <div class="title rounded-all title-2">
@@ -128,7 +137,7 @@
           <span id="soic"></span><br>
           <small><span id="soic-location"></span></small>
         </p>
-        <ul id="soic-content"></ul>
+        <ul class="work-content-list" id="soic-content"></ul>
       </div>
       <div>
         <h3><span id='jungle-job'></span>
@@ -137,14 +146,14 @@
           <span id='jungle'></span><br>
           <small><span id='jungle-location'></span></small>
         </p>
-        <ul id="jungle-content"></ul>
+        <ul class="work-content-list" id="jungle-content"></ul>
       </div>
       <div>
         <h3><span id="navy-job"></span> <small class="year">2012-2013</small></h3>
         <p><span id="navy"></span><br>
-        <small><span id="navy-location"></span></small>
+          <small><span id="navy-location"></span></small>
         </p>
-        <ul id="navy-content"></ul>
+        <ul class="work-content-list" id="navy-content"></ul>
       </div>
     </div>
     <div class="title rounded-all title-3">
@@ -157,6 +166,7 @@
             <div class="card-img card-img-1"></div>
             <p class="card-title" id="prj-title1"></p>
             <p class="card-comment" id="prj-comment1"></p>
+            <p class="card-comment-print" id="prj-comment1-print">text1</p>
           </a>
         </div>
         <div class="card">
@@ -164,6 +174,7 @@
             <div class="card-img card-img-2"></div>
             <p class="card-title" id="prj-title2"></p>
             <p class="card-comment" id="prj-comment2"></p>
+            <p class="card-comment-print" id="prj-comment2-print">text2</p>
           </a>
         </div>
         <div class="card">
@@ -171,6 +182,7 @@
             <div class="card-img card-img-3"></div>
             <p class="card-title" id="prj-title3"></p>
             <p class="card-comment" id="prj-comment3"></p>
+            <p class="card-comment-print" id="prj-comment3p-print">text3</p>
           </a>
         </div>
       </div>

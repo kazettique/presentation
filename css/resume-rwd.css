@@ -218,4 +218,8 @@
   .blinking-cursor {
     font-size: 2rem;
   }
+  
+  .printBlock {
+    display: none;
+  }
 }

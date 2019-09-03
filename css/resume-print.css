@@ -1,0 +1,297 @@
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .container {
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+      'banner  banner'
+      'title-1 title-2'
+      'content-1 content-2'
+      'title-4 title-5'
+      'content-4 content-5'
+      'title-3 title-3'
+      'content-3 content-3';
+    gap: 0.5rem;
+  }
+
+  .title-1,
+  .title-2,
+  .title-3,
+  .title-4,
+  .title-5 {
+    border-left: 10px solid #adadad;
+    font-style: oblique;
+  }
+
+  .content {
+    background: #ffffff;
+    color: #252525;
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    color: #888888;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+  }
+
+  .title p {
+    margin: 0.5rem 0;
+  }
+
+  b {
+    font-weight: 600;
+  }
+
+  .banner {
+    /* background: #e2e1e0; */
+    background-color: #e2e1e0;
+    background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
+    grid-area: banner;
+    height: 120px;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-auto-rows: auto; */
+    grid-template-areas: 'name name name contact contact';
+    gap: 0;
+  }
+
+  /* display none in print css */
+  .blinking-cursor,
+  .locale-menu,
+  .locale-menu-mobile,
+  .navbar-title-mobile,
+  .navbar-mail-mobile,
+  .progress-container,
+  .scroll,
+  .card:nth-child(3),
+  .card-img {
+    display: none;
+  }
+
+  .banner-title {
+    font-size: 3rem;
+    color: #252525;
+    margin: 0;
+  }
+
+  .name-plate {
+    font-size: 1.8rem;
+    align-self: center;
+    grid-area: name;
+  }
+
+  .contact {
+    color: #333333;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    grid-area: contact;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .qrCode {
+    display: block;
+    text-align: center;
+  }
+
+  .qrCode img {
+    width: 80px;
+    height: auto;
+  }
+
+  a {
+    color: #252525;
+  }
+
+  ul {
+    line-height: 1.2rem;
+  }
+
+  .content-1 {
+    grid-area: content-1;
+  }
+
+  .title-1 {
+    grid-area: title-1;
+    display: flex;
+  }
+
+  .title-1 p,
+  .title-2 p,
+  .title-3 p,
+  .title-4 p,
+  .title-5 p {
+    align-self: center;
+  }
+
+  .title-2 {
+    grid-area: title-2;
+    display: flex;
+  }
+
+  .content-2 {
+    grid-area: content-2;
+  }
+
+  .title-3 {
+    grid-area: title-3;
+    display: flex;
+  }
+
+  .content-3 {
+    grid-area: content-3;
+  }
+
+  .title-4 {
+    grid-area: title-4;
+    display: flex;
+  }
+
+  .content-4 {
+    grid-area: content-4;
+  }
+
+  .title-5 {
+    grid-area: title-5;
+    display: flex;
+  }
+
+  .content-5 {
+    grid-area: content-5;
+    display: block;
+    /* grid-template-columns: 1fr; */
+    /* grid-auto-rows: auto; */
+    gap: 0;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .lang,
+  .cert {
+    display: flex;
+  }
+
+  .lang-list,
+  .lang-level {
+    width: 6.25rem;
+    margin: 0.5rem;
+  }
+
+  .cert-title,
+  .cert-grade {
+    width: 9.375rem;
+    margin: 0.5rem;
+  }
+
+  .lang-list {
+    font-weight: 600;
+  }
+
+  .cert-header {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .cert-item {
+    margin: 0.5rem;
+  }
+
+  .skill {
+    width: 100%;
+    display: flex;
+  }
+
+  .skill-list {
+    width: auto;
+    margin: 0.5rem;
+  }
+
+  .devicon {
+    font-size: 3rem;
+  }
+
+  .skill-icon {
+    margin: 1rem;
+    display: none;
+  }
+
+  .skill-name {
+    text-align: left;
+    transition: 0.5s;
+  }
+
+  /* My projects grid */
+  .project-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 3rem;
+    z-index: 2;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    background: #fffeee;
+    /* display: block; */
+  }
+
+  .card {
+    width: auto;
+    height: auto;
+    padding: 0em;
+    /* background: #fffff6; */
+    margin: 0;
+    line-height: 1rem;
+  }
+
+  .card a {
+    text-decoration: none;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .card-comment {
+    margin: 1rem 0 0.5rem 0;
+    transition: 0.5s;
+  }
+
+  .card-comment-print {
+    font-style: italic;
+  }
+
+  .lang-list{
+    width: 9.375rem;
+  }
+
+  .cert-header {
+    margin-top: 2rem;
+    font-weight: 700;
+  }
+
+  .printBlock {
+    display: none;
+  }
+}
+

@@ -2,6 +2,8 @@
   "greeting": "嗨！我是 ",
   "name": "張皓涵",
   "full-name": "姓名：",
+  "qrCode-txt": "掃描一下!",
+  "printMsg":"列印此頁面！",
 
   "title-education": "學歷",
 
@@ -40,8 +42,10 @@
   "title-my-projects": "作品集",
   "prj-title1": "我的履歷",
   "prj-comment1": "使用CSS Grid、jQuery i18n製作",
+  "prj-comment1-print": "呈現我的個人資料及過去的經歷，使用jQuery i18n製作多語系網站。",
   "prj-title2": "The Wheel",
   "prj-comment2": "前端課程的小組專題，使用React.js、Node.js、mySQL等技術",
+  "prj-comment2-print": "投入單車的世界！網站有單車資訊、單車商品，還有更多！",
   "prj-title3": "世界奇觀建造中",
   "prj-comment3": "請給我木材！",
 
