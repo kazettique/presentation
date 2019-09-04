@@ -148,12 +148,12 @@
 
   .title {
     font-size: 2rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     margin: 0;
   }
 
   .content {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     margin: 0;
   }
 
@@ -172,7 +172,6 @@
     width: 100%;
     margin: 0 auto;
     padding: 1rem 0 1rem 0;
-    /* height: 3rem; */
   }
 
   .locale-icon-mobile {
@@ -210,6 +209,8 @@
   .content-5 {
     grid-template-columns: 1fr;
     font-size: 24px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .lang-list,
@@ -232,5 +233,9 @@
 
   .printBlock {
     display: none;
+  }
+
+  .project-container {
+    padding: 1.5rem 0;
   }
 }
