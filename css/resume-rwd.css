@@ -135,6 +135,12 @@
     width: 100%;
   }
 
+  .banner {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .banner-title {
     font-size: 2rem;
     line-height: 2rem;
@@ -142,16 +148,21 @@
 
   .title {
     font-size: 2rem;
+    padding: 0 0.5rem;
+    margin: 0;
+  }
+
+  .content {
+    padding: 0 0.5rem;
+    margin: 0;
   }
 
   .contact {
     margin: auto auto 0 auto;
-    /* font-size: 1rem; */
   }
 
   .locale-icon-mobile {
-    /* width: 100%; */
-    width: 24.6rem;
+    width: 100vw;
     height: 3rem;
     text-align: left;
     padding-left: 1rem;
@@ -218,7 +229,7 @@
   .blinking-cursor {
     font-size: 2rem;
   }
-  
+
   .printBlock {
     display: none;
   }
