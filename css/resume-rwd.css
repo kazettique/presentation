@@ -89,6 +89,10 @@
   .skill {
     grid-template-columns: repeat(5, 1fr);
   }
+
+  .printBlock {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -229,10 +233,6 @@
 
   .blinking-cursor {
     font-size: 2rem;
-  }
-
-  .printBlock {
-    display: none;
   }
 
   .project-container {

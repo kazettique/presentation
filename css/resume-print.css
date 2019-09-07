@@ -27,18 +27,26 @@
   .title-3,
   .title-4,
   .title-5 {
-    border-left: 10px solid #adadad;
+    border-left: 10px solid #4ca1af;
+    /* border-width: 0 0 0 10px;
+    border-color: #4ca1af;
+    border-style: solid;
+    border-image: linear-gradient(
+      to bottom, 
+      #4ca1af, 
+      #2c3e50
+    ) 1 100%; */
     font-style: oblique;
   }
 
   .content {
     background: #ffffff;
-    color: #252525;
+    color: #2c3e50;
     padding: 0 0.5rem;
   }
 
   .title {
-    color: #888888;
+    color: #4ca1af;
     font-size: 2rem;
     font-weight: 500;
     padding: 0 0.5rem;
@@ -54,8 +62,11 @@
 
   .banner {
     /* background: #e2e1e0; */
-    background-color: #e2e1e0;
-    background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
+    /* background-color: #e2e1e0;
+    background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png'); */
+    background: #2c3e50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4ca1af, #2c3e50);
+    background: linear-gradient(to right, #4ca1af, #2c3e50);
     grid-area: banner;
     height: 120px;
     padding: 0 1.5rem;
@@ -81,7 +92,7 @@
 
   .banner-title {
     font-size: 3rem;
-    color: #252525;
+    color: #fffeee;
     margin: 0;
   }
 
@@ -92,7 +103,7 @@
   }
 
   .contact {
-    color: #333333;
+    color: #fffeee;
     font-size: 0.8rem;
     line-height: 1rem;
     grid-area: contact;
@@ -112,7 +123,7 @@
   }
 
   a {
-    color: #252525;
+    color: #fffeee;
   }
 
   ul {
@@ -178,6 +189,10 @@
 
   .footer {
     display: none;
+  }
+
+  .year {
+    color: #4ca1af;
   }
 
   .lang,
@@ -250,7 +265,7 @@
   .project-card {
     width: 100%;
     height: auto;
-    background: #fffeee;
+    background: #ffffff;
     /* display: block; */
   }
 
@@ -270,18 +285,21 @@
   .card-title {
     font-weight: 700;
     font-size: 1.3rem;
+    color: #2c3e50;
   }
 
   .card-comment {
     margin: 1rem 0 0.5rem 0;
     transition: 0.5s;
+    color: #2c3e50;
   }
 
   .card-comment-print {
     font-style: italic;
+    color: #2c3e50;
   }
 
-  .lang-list{
+  .lang-list {
     width: 9.375rem;
   }
 
@@ -294,4 +312,3 @@
     display: none;
   }
 }
-
