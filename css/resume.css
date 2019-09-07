@@ -709,6 +709,7 @@ ul {
   transition: 0.5s;
 }
 
-.card-comment-print {
+.card-comment-print,
+.card-url-print {
   display: none;
 }

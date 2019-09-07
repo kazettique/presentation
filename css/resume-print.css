@@ -290,13 +290,18 @@
 
   .card-comment {
     margin: 1rem 0 0.5rem 0;
-    transition: 0.5s;
     color: #2c3e50;
   }
 
-  .card-comment-print {
+  .card-comment-print,
+  .card-url-print {
+    display: block;
     font-style: italic;
     color: #2c3e50;
+  }
+
+  .card-url-print {
+    text-decoration: underline;
   }
 
   .lang-list {
