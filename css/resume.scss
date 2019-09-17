@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
-  grid-template-areas: 'banner banner banner' 'content-edu content-edu title-edu' 'title-exp content-exp content-exp' 'content-projects content-projects title-projects' 'title-skills content-skills content-skills' 'content-lang content-lang title-lang' 'footer footer footer';
+  grid-template-areas: 'banner banner banner''content-edu content-edu title-edu''title-exp content-exp content-exp''content-projects content-projects title-projects''title-skills content-skills content-skills''content-lang content-lang title-lang''footer footer footer';
   gap: 1.5rem;
   position: relative;
   z-index: 1;
@@ -59,7 +59,7 @@ b {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: '. . .' 'name name .' '. . contact';
+  grid-template-areas: '. . .''name name .''. . contact';
   gap: 0;
 }
 
@@ -75,50 +75,60 @@ b {
 }
 
 @keyframes blink {
+
   from,
   to {
     color: transparent;
   }
+
   50% {
     color: $beige;
   }
 }
 
 @-moz-keyframes blink {
+
   from,
   to {
     color: transparent;
   }
+
   50% {
     color: $beige;
   }
 }
 
 @-webkit-keyframes blink {
+
   from,
   to {
     color: transparent;
   }
+
   50% {
     color: $beige;
   }
 }
 
 @-ms-keyframes blink {
+
   from,
   to {
     color: transparent;
   }
+
   50% {
     color: $beige;
   }
 }
 
 @-o-keyframes blink {
+
   from,
   to {
     color: transparent;
   }
+
   50% {
     color: $beige;
   }
@@ -229,7 +239,8 @@ ul {
 
 .footer {
   /* From uiGradients: Deep Sea Space */
-  background: $deep-ocean; /* fallback for old browsers */
+  background: $deep-ocean;
+  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, $ocean, $deep-ocean);
   background: linear-gradient(to left, $ocean, $deep-ocean);
   @extend %box-shadow;
@@ -432,14 +443,15 @@ ul {
     width: auto;
     margin: 0.5rem;
 
-    &:hover .devicon, &:hover .skill-name {
+    &:hover .devIcon,
+    &:hover .skill-name {
       color: $ocean;
     }
   }
 
-  .devicon {
+  .devIcon {
     font-size: 3rem;
-    transition: 0.5s;
+    @extend %transition;
   }
 
   .skill-icon {
@@ -631,7 +643,8 @@ ul {
       box-shadow: none;
     }
 
-    .card-title, .card-comment {
+    .card-title,
+    .card-comment {
       color: $ocean;
     }
   }
@@ -677,4 +690,3 @@ ul {
     display: none;
   }
 }
-

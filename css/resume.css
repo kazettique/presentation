@@ -1,4 +1,4 @@
-.card .card-comment, .card .card-title, .card .card-img, .printBlock .printMsg, .printBlock .printBtn, .scroll-top .scroll, .locale-items-mobile, .locale-menu-mobile, .locale-menu .locale-icon, .locale-menu .locale-items .locale-item, .locale-menu, .footer, .contact a, .banner, .title, .content {
+.card .card-comment, .card .card-title, .card .card-img, .printBlock .printMsg, .printBlock .printBtn, .scroll-top .scroll, .skill .devIcon, .locale-items-mobile, .locale-menu-mobile, .locale-menu .locale-icon, .locale-menu .locale-items .locale-item, .locale-menu, .footer, .contact a, .banner, .title, .content {
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -391,12 +391,11 @@ ul {
   width: auto;
   margin: 0.5rem;
 }
-.skill .skill-list:hover .devicon, .skill .skill-list:hover .skill-name {
+.skill .skill-list:hover .devIcon, .skill .skill-list:hover .skill-name {
   color: #4ca1af;
 }
-.skill .devicon {
+.skill .devIcon {
   font-size: 3rem;
-  transition: 0.5s;
 }
 .skill .skill-icon {
   margin: 1rem;
@@ -559,7 +558,8 @@ ul {
   filter: none;
   box-shadow: none;
 }
-.card:hover .card-title, .card:hover .card-comment {
+.card:hover .card-title,
+.card:hover .card-comment {
   color: #4ca1af;
 }
 .card .card-img {

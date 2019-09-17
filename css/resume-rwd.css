@@ -2,200 +2,193 @@
   .container {
     width: 95vw;
   }
-
   .banner {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "name name name ." ". . contact contact";
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'name name name .' '. . contact contact';
   }
-
   .contact {
     margin-top: auto;
     margin-left: auto;
   }
 }
+
 @media only screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    grid-template-areas: "banner" "title-edu" "content-edu" "title-exp" "content-exp" "title-projects" "content-projects" "title-skills" "content-skills" "title-lang" "content-lang" "footer";
+        grid-template-areas: 'banner' 'title-edu' 'content-edu' 'title-exp' 'content-exp' 'title-projects' 'content-projects' 'title-skills' 'content-skills' 'title-lang' 'content-lang' 'footer';
     gap: 1rem;
   }
-
   .banner {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "name name name . " ". . . ." ". .  contact contact";
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 'name name name . ' '. . . .' '. .  contact contact';
   }
-
   .locale-menu {
     display: none;
   }
-
   .locale-menu-mobile {
     display: block;
   }
-
   .printBlock {
     display: none;
   }
-
   .skill {
-    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
   }
 }
+
 @media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: 95vw;
   }
-
   .banner {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "name" "contact";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'name' 'contact';
     gap: 0;
     padding: 0.5rem;
   }
-
   .skill {
-    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
   }
 }
+
 @media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     width: auto;
   }
-
   .project-container {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     gap: 1rem;
   }
-
   .banner {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "name" "contact";
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'name' 'contact';
     gap: 0;
     padding: 0.2rem;
   }
-
   .name-plate {
     text-align: center;
   }
-
   .skill {
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media only screen and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 1) {
   body {
     font-size: 18px;
   }
-
   .container {
     width: 100%;
   }
-
   .banner {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-
   .banner-title {
     font-size: 2rem;
     line-height: 2rem;
   }
-
   .title {
     font-size: 2rem;
     padding: 0 1rem;
     margin: 0;
   }
-
   .content {
     padding: 0 1rem;
     margin: 0;
   }
-
   .contact {
     margin: auto auto 0 auto;
   }
-
   .locale-icon-mobile {
     width: 100vw;
     height: 3rem;
     text-align: left;
     padding-left: 1rem;
   }
-
   .locale-item-mobile {
     width: 100%;
     margin: 0 auto;
     padding: 1rem 0 1rem 0;
   }
-
   .locale-icon-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     line-height: 3rem;
   }
-
   .open-btn {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     padding-left: 1rem;
   }
-
   .nav-bar-mail-mobile {
     display: block;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     padding-right: 1rem;
     padding-top: 1rem;
   }
-
   .nav-bar-title-mobile {
     display: block;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     text-align: center;
   }
-
   .container {
     top: 1.3rem;
   }
-
   .skill {
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
-
   .content-lang {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     font-size: 24px;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
   .lang-list,
-.lang-level {
+  .lang-level {
     width: 9.25rem;
     font-size: 1rem;
   }
-
   .cert-header {
     margin-top: 2rem;
   }
-
   .cert-title {
     font-size: 1rem;
   }
-
   .blinking-cursor {
     font-size: 2rem;
   }
-
   .project-container {
     padding: 1.5rem 0;
   }
 }
-
 /*# sourceMappingURL=resume-rwd.css.map */
