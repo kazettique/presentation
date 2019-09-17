@@ -14,7 +14,7 @@
   <link rel="stylesheet" media="print" href="/css/resume-print.css">
   <!-- FontAwesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-  <!-- Devicon -->
+  <!-- DevIcon -->
   <link rel="stylesheet"
     href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <!-- Find more icon here!! -->
@@ -27,21 +27,21 @@
 
 <body>
   <!-- Locale menu -->
-  <div class="locale-menu transition">
-    <div class="locale-icon transition"><i class="fas fa-language fa-2x"></i></div>
+  <div class="locale-menu">
+    <div class="locale-icon"><i class="fas fa-language fa-2x"></i></div>
     <div class="locale-items">
-      <div class="locale-item transition btn-en" data-locale="en">English</div>
-      <div class="locale-item transition btn-zh-tw" data-locale="zh-tw">中文</div>
-      <div class="locale-item transition btn-ja" data-locale="ja">日本語</div>
+      <div class="locale-item btn-en" data-locale="en">English</div>
+      <div class="locale-item btn-zh-tw" data-locale="zh-tw">中文</div>
+      <div class="locale-item btn-ja" data-locale="ja">日本語</div>
     </div>
   </div>
 
   <!-- Locale menu for mobile device -->
   <div class="locale-menu-mobile">
-    <div class="locale-icon-mobile transition">
+    <div class="locale-icon-mobile">
       <i class="fas fa-language fa-2x open-btn"></i>
-      <span class="navbar-title-mobile">Woody's Resume</span>
-      <a href="mailto: kazettique@gmail.com" class="navbar-mail-mobile"><i class="fas fa-envelope fa-2x"></i></a>
+      <span class="nav-bar-title-mobile">Woody's Resume</span>
+      <a href="mailto: kazettique@gmail.com" class="nav-bar-mail-mobile"><i class="fas fa-envelope fa-2x"></i></a>
     </div>
     <div class="locale-items-mobile">
       <div class="locale-item-mobile btn-en" data-locale="en">English</div>
@@ -58,18 +58,18 @@
   </div>
 
   <!-- Scroll top button -->
-  <div class='scrolltop'>
-    <div class='scroll icon rounded-all transition'><i class="fa fa-2x fa-angle-up"></i></div>
+  <div class='scroll-top'>
+    <div class='scroll icon'><i class="fa fa-2x fa-angle-up"></i></div>
   </div>
 
   <!-- Print button -->
   <div class='printBlock'>
-    <div class='printBtn icon rounded-all transition'><i class="fa fa-2x fa-print" onclick="printIt()"></i></div>
-    <div class="box2 sb10 rounded-all printMsg" id="printMsg">Print Me!</div>
+    <div class='printBtn icon'><i class="fa fa-2x fa-print" onclick="printIt()"></i></div>
+    <div class="box2 sb10 printMsg" id="printMsg">Print Me!</div>
   </div>
 
   <div class="container">
-    <div class="banner rounded-all">
+    <div class="banner">
       <div class="name-plate">
         <h1 class="banner-title">
           <small class="greeting" id="greeting"></small> <span class="name" id="name"></span><span
@@ -82,20 +82,20 @@
             <span id="full-name"></span>Hao-Han Chang (張皓涵)
           </li>
           <li>
-            E-Mail: <a href="mailto: kazettique@gmail.com" class="transition">kazettique@gmail.com</a>
+            E-Mail: <a href="mailto: kazettique@gmail.com" class="">kazettique@gmail.com</a>
           </li>
           <li>
             Github: <a href="https://github.com/kazettique" target="_blank"
-              class="transition">https://github.com/kazettique</a>
+              class="">https://github.com/kazettique</a>
           </li>
         </ul>
         <div class="qrCode"><img src="/img/resume-qrcode.svg" alt=""><br><b id="qrCode-txt"></b></div>
       </div>
     </div>
-    <div class="title rounded-all title-1">
+    <div class="title title-edu">
       <p id="title-education"></p>
     </div>
-    <div class="content rounded-all content-1">
+    <div class="content content-edu">
       <div>
         <h3>
           <span id="iii"></span> <small class="year">2018-2019</small>
@@ -126,10 +126,10 @@
         <ul class="edu-content-list" id="ncku-content"></ul>
       </div>
     </div>
-    <div class="title rounded-all title-2">
+    <div class="title title-exp">
       <p id="title-work-experience"></p>
     </div>
-    <div class="content rounded-all content-2">
+    <div class="content content-exp">
       <div>
         <h3><span id="soic-job"></span> <small class="year">2016-2018</small></h3>
         <p>
@@ -155,10 +155,10 @@
         <ul class="work-content-list" id="navy-content"></ul>
       </div>
     </div>
-    <div class="title rounded-all title-3">
+    <div class="title title-projects">
       <p id="title-my-projects"></p>
     </div>
-    <div class="content rounded-all content-3">
+    <div class="content content-projects">
       <div class="project-container">
         <div class="card">
           <a href="https://kazettique.github.io/doc/resume.html" target="_blank">
@@ -188,10 +188,10 @@
         </div>
       </div>
     </div>
-    <div class="title rounded-all title-4">
+    <div class="title title-skills">
       <p id="title-technical-skills"></p>
     </div>
-    <div class="content rounded-all content-4">
+    <div class="content content-skills">
       <h3 id="web-dev"></h3>
       <div class="skill">
         <div class="skill-list">
@@ -311,10 +311,10 @@
         </div>
       </div>
     </div>
-    <div class="title rounded-all title-5">
+    <div class="title title-lang">
       <p id="languages"></p>
     </div>
-    <div class="content rounded-all content-5">
+    <div class="content content-lang">
       <div class="col-lang">
         <div class="lang">
           <div class="lang-list" id="mandarin"></div>
@@ -345,7 +345,7 @@
         </div>
       </div>
     </div>
-    <div class="footer rounded-all">
+    <div class="footer">
       Created by Woody, updated in Sep 2019
     </div>
   </div>

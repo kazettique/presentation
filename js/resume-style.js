@@ -49,11 +49,11 @@ function myFunction() {
 // Scroll top button
 $(window).scroll(function() {
   if ($(this).scrollTop() > 50) {
-    $('.scrolltop:hidden')
+    $('.scroll-top:hidden')
       .stop(true, true)
       .fadeIn()
   } else {
-    $('.scrolltop')
+    $('.scroll-top')
       .stop(true, true)
       .fadeOut()
   }

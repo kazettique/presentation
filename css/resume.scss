@@ -1,0 +1,680 @@
+@import "./resume-modules";
+
+body {
+  background: $concrete;
+}
+
+.container {
+  max-width: 1080px;
+  height: 100%;
+  margin: 2rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas: 'banner banner banner' 'content-edu content-edu title-edu' 'title-exp content-exp content-exp' 'content-projects content-projects title-projects' 'title-skills content-skills content-skills' 'content-lang content-lang title-lang' 'footer footer footer';
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  background: $beige;
+  color: $deep-ocean;
+  @extend %box-shadow;
+  @extend %transition;
+  @extend %rounded-all;
+}
+
+.title {
+  background: $papyrus;
+  color: $ocean;
+  font-size: 2.8rem;
+  font-weight: 400;
+  @extend %box-shadow;
+  @extend %transition;
+  @extend %rounded-all;
+
+  p {
+    align-self: center;
+  }
+}
+
+b {
+  font-weight: 600;
+}
+
+.banner {
+  /* From uiGradients: Deep Sea Space */
+  background: $deep-ocean; // fallback for old browsers
+  background: -webkit-linear-gradient(to right, $ocean, $deep-ocean);
+  background: linear-gradient(to right, $ocean, $deep-ocean);
+
+  @extend %box-shadow;
+  @extend %transition;
+  @extend %rounded-all;
+  grid-area: banner;
+  height: 300px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: '. . .' 'name name .' '. . contact';
+  gap: 0;
+}
+
+.blinking-cursor {
+  font-weight: bold;
+  font-size: 3.6rem;
+  color: $deep-ocean;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: $beige;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: $beige;
+  }
+}
+
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: $beige;
+  }
+}
+
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: $beige;
+  }
+}
+
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: $beige;
+  }
+}
+
+.banner-title {
+  color: $beige;
+  margin: 0;
+}
+
+.name-plate {
+  font-size: 1.8rem;
+  align-self: center;
+  grid-area: name;
+}
+
+.contact {
+  color: $beige;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  grid-area: contact;
+  display: block;
+
+  a {
+    @extend %transition;
+  }
+}
+
+.qrCode {
+  display: none;
+}
+
+a {
+  color: $beige;
+
+  &:hover {
+    color: $ocean;
+  }
+}
+
+ul {
+  line-height: 1.8rem;
+}
+
+.content-edu {
+  grid-area: content-edu;
+  padding: 2rem;
+}
+
+.title-edu {
+  grid-area: title-edu;
+  display: flex;
+  padding-left: 2rem;
+}
+
+
+.title p {
+  align-self: center;
+}
+
+.title-exp {
+  grid-area: title-exp;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.content-exp {
+  grid-area: content-exp;
+  padding: 2rem;
+}
+
+.title-projects {
+  grid-area: title-projects;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.content-projects {
+  grid-area: content-projects;
+  padding: 3rem;
+}
+
+.title-skills {
+  grid-area: title-skills;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.content-skills {
+  grid-area: content-skills;
+  padding: 2rem;
+}
+
+.title-lang {
+  grid-area: title-lang;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.content-lang {
+  grid-area: content-lang;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 0;
+}
+
+.footer {
+  /* From uiGradients: Deep Sea Space */
+  background: $deep-ocean; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, $ocean, $deep-ocean);
+  background: linear-gradient(to left, $ocean, $deep-ocean);
+  @extend %box-shadow;
+  @extend %transition;
+  @extend %rounded-all;
+  color: $beige;
+  grid-area: footer;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.locale-menu {
+  position: fixed;
+  top: 1rem;
+  right: -6.5rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  @extend %transition;
+
+  &:hover {
+    right: 0;
+  }
+
+
+  .locale-items {
+    background: $ocean;
+    align-self: flex-end;
+    position: absolute;
+    padding-top: 0.2rem;
+    top: 2.3rem;
+    z-index: 3;
+
+    .locale-item {
+      width: 5rem;
+      height: 2rem;
+
+      color: $deep-ocean;
+      background: $ocean;
+      line-height: 2rem;
+      text-align: center;
+
+      padding: 0 1rem 0 1rem;
+      cursor: pointer;
+      border-left: 0.2rem solid $concrete;
+      @extend %transition;
+
+      &:hover {
+        background: $deep-ocean;
+        color: $beige;
+      }
+
+    }
+
+    .locale-item:nth-child(3) {
+      border-bottom: 0.2rem solid $concrete;
+    }
+  }
+
+  .locale-icon {
+    width: 8.125rem;
+    height: 2.3rem;
+
+    color: $deep-ocean;
+    background: $ocean;
+    line-height: 2rem;
+    text-align: left;
+
+    padding: 0 1rem 0 0.5rem;
+    border: 0.2rem solid $concrete;
+    border-right: none;
+
+    cursor: pointer;
+    vertical-align: middle;
+    z-index: 2;
+    @extend %transition;
+  }
+}
+
+.locale-menu-mobile {
+  position: fixed;
+  top: 0.3rem;
+  left: 0rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  flex-direction: column;
+  z-index: 10;
+  display: none;
+  @extend %transition;
+}
+
+.locale-icon-mobile {
+  width: 3rem;
+  height: 3rem;
+
+  color: $deep-ocean;
+  background: $ocean;
+  line-height: 3rem;
+  text-align: center;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+
+.locale-items-mobile {
+  background: $deep-ocean;
+  align-self: flex-start;
+  display: none;
+  @extend %box-shadow;
+  @extend %transition;
+
+  .locale-item-mobile {
+    width: 5rem;
+    height: 2rem;
+
+    color: $papyrus;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  background: $deep-ocean;
+  color: $beige;
+}
+
+.nav-bar-title-mobile,
+.nav-bar-mail-mobile {
+  display: none;
+}
+
+.nav-bar-title-mobile {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.nav-bar-mail-mobile {
+  color: $deep-ocean;
+}
+
+.fa-language {
+  vertical-align: middle;
+}
+
+.year {
+  color: $ocean;
+}
+
+.lang,
+.cert {
+  display: flex;
+}
+
+.lang-list,
+.lang-level {
+  width: 6.25rem;
+  margin: 0.5rem;
+}
+
+.cert-title,
+.cert-grade {
+  width: 9.375rem;
+  margin: 0.5rem;
+}
+
+.lang-list {
+  font-weight: 600;
+}
+
+.cert-header {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cert-item {
+  margin: 0.5rem;
+}
+
+.cert-grade {
+  color: $ocean;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  gap: 0;
+  text-align: center;
+
+  .skill-list {
+    width: auto;
+    margin: 0.5rem;
+
+    &:hover .devicon, &:hover .skill-name {
+      color: $ocean;
+    }
+  }
+
+  .devicon {
+    font-size: 3rem;
+    transition: 0.5s;
+  }
+
+  .skill-icon {
+    margin: 1rem;
+  }
+
+  .skill-name {
+    text-align: center;
+    transition: 0.5s;
+  }
+}
+
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  opacity: 0.8;
+}
+
+// The progress container (grey background)
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: $concrete;
+}
+
+// The progress bar (scroll indicator)
+.progress-bar {
+  height: 8px;
+  background: $ocean;
+  width: 0;
+}
+
+// Go to Top Button
+.scroll-top {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+
+  .scroll {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: $deep-ocean;
+    background: $ocean;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    @extend %transition;
+    @extend %rounded-all;
+
+    &:hover {
+      color: $beige;
+      background: $deep-ocean;
+    }
+  }
+}
+
+.printBlock {
+  position: relative;
+
+  &:hover .printMsg {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .printBtn {
+    display: block;
+    position: fixed;
+    left: 10px;
+    top: 1rem;
+    color: $deep-ocean;
+    background: $ocean;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 2;
+    @extend %transition;
+    @extend %rounded-all;
+
+    &:hover {
+      color: $beige;
+      background: $deep-ocean;
+    }
+  }
+
+  /* Transition with display property: https://stackoverflow.com/questions/3331353/transitions-on-the-display-property */
+  .printMsg {
+    position: relative;
+    background: $ocean;
+    @extend %transition;
+    @extend %rounded-all;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  /* Thanks, Rajesh DN! - https://codingislove.com/css-speech-bubbles/ */
+  .box2 {
+    width: auto;
+    margin: 50px auto;
+    border: 4px solid $concrete;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: $beige;
+    font-family: arial;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+  }
+
+  .sb10 {
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid $concrete;
+      left: 15%;
+      top: -23px;
+    }
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid $ocean;
+      left: 15%;
+      top: -18px;
+    }
+  }
+}
+
+/* My projects grid */
+.project-container {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 3rem;
+  z-index: 2;
+}
+
+.project-card {
+  width: 100%;
+  height: 300px;
+  background: $beige;
+  display: block;
+}
+
+.card {
+  width: auto;
+  height: auto;
+  padding: 1.5rem;
+  background: $papyrus;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24),
+  inset 0px 0px 50px rgba(119, 80, 29, 0.3);
+  transition: 0.5s;
+  position: relative;
+
+  a {
+    color: $deep-ocean;
+    text-decoration: none;
+  }
+
+  &:hover {
+    .card-img {
+      filter: none;
+      box-shadow: none;
+    }
+
+    .card-title, .card-comment {
+      color: $ocean;
+    }
+  }
+
+  .card-img {
+    width: auto;
+    height: 12rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: sepia(50%) brightness(80%) contrast(120%);
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 20, 1);
+    @extend %transition;
+  }
+
+  .card-img-1 {
+    background-image: url('../img/my-resume.png');
+  }
+
+  .card-img-2 {
+    background-image: url('../img/the-wheel.png');
+  }
+
+  .card-img-3 {
+    background-image: url('https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80');
+  }
+
+  .card-title {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+    text-transform: uppercase;
+    @extend %transition;
+  }
+
+  .card-comment {
+    margin: 0.5rem 0 1rem 0;
+    @extend %transition;
+  }
+
+  .card-comment-print,
+  .card-url-print {
+    display: none;
+  }
+}
+

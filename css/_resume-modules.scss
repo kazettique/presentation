@@ -1,0 +1,23 @@
+// colors
+$ocean: #4ca1af;
+$deep-ocean: #2c3e50;
+$concrete: #e2e1e0;
+$beige: #fffeee;
+$papyrus: #fffff6;
+
+// animations
+%transition {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+%box-shadow {
+  box-shadow: 0 1px 3px rgba(85, 85, 85, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
+%rounded-all {
+  border-radius: 2px;
+}
