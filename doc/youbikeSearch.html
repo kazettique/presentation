@@ -6,21 +6,50 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/youbikeApp.css">
-  <script src="/js/youbike.js"></script>
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="/css/youbikeSearch.css">
+  <!-- OpenLayers -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
+    type="text/css">
   <title>Youbike 查詢</title>
 </head>
 
 <body>
-  <input type="text" placeholder="請輸入站台的編號(0001~0404)" size="30" class="sno">
-  <button onclick="handleClick()">查詢</button>
   <div class="box">
-    <h1>站名：<span class='sna'>NA</span></h1>
-    <p>總車數：<span class='tot'>NA</span>輛 </p>
-    <p>可借車量：<span class='sbi'>NA</span>輛</p>
-    <p>空車位：<span class='bemp'>NA</span>輛</p>
+    <div class="sideNav">
+      <div class="searchBar">
+        <input type="text" placeholder="請輸入站台的編號(0001~0404)" size="30" class="sno">
+        <button onclick="handleClick()">查詢</button>
+        <select name="taipeiArea" id="">
+          <option value="0" default>台北市全區</option>
+          <option value="1">北投區</option>
+          <option value="2">士林區</option>
+          <option value="3">中山區</option>
+          <option value="4">內湖區</option>
+          <option value="5">大同區</option>
+          <option value="6">松山區</option>
+          <option value="7">萬華區</option>
+          <option value="8">中正區</option>
+          <option value="9">大安區</option>
+          <option value="10">信義區</option>
+          <option value="11">南港區</option>
+          <option value="12">文山區</option>
+        </select>
+      </div>
+      <div class="infoBlock">
+        <h3>站名：<span class='sna'>NA</span></h3>
+        <p>總車數：<span class='tot'>NA</span>輛 </p>
+        <p>可借車量：<span class='sbi'>NA</span>輛</p>
+        <p>空車位：<span class='bemp'>NA</span>輛</p>
+      </div>
+    </div>
+    <div id="map" class="map"></div>
   </div>
 
 </body>
+<!-- OpenLayers -->
+<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+<!-- My script -->
+<script src="/js/youbike.js"></script>
 
 </html>

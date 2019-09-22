@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  .box {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    .map {
+      height: 100%;
+      width: 80%;
+    }
+
+    .sideNav {
+      height: 100vh;
+      width: 20%;
+      background: #ccc;
+
+      .searchBar{
+        height: 10%;
+      }
+
+      .infoBlock {
+        height: 90%;
+        overflow: scroll;
+      }
+    }
+  }
+}
