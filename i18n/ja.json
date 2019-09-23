@@ -46,8 +46,11 @@
   "prj-title2": "The Wheel",
   "prj-comment2": "ウェブデベロッパー養成コースでのチームプロジェクトで、React.js、Node.jsやmySQLなどを使いました",
   "prj-comment2-print": "サイクリングの世界へ！サイクリングのニュースや商品など、他にもあります！",
-  "prj-title3": "構築中",
-  "prj-comment3": "ツールを集めよう！",
+  "prj-title3":"youbikeSearch",
+  "prj-comment3": "台北のレンタサイクルの情報を手に入れます。OpenLayer API、YouBike API、Bootstrapで作りました。",
+  "prj-comment3-print": "各レンタルステーションの状態：レンタサイクルの数、空いている駐車ポート、場所などの情報が検索できます。",
+  "prj-title0": "構築中",
+  "prj-comment0": "ツールを集めよう！",
 
   "title-technical-skills": "技術",
 

@@ -3,7 +3,7 @@
   "name": "Woody!",
   "full-name": "Full Name: ",
   "qrCode-txt": "Scan It!",
-  "printMsg":"Print this page!",
+  "printMsg": "Print this page!",
 
   "title-education": "EDUCATION",
 
@@ -46,8 +46,11 @@
   "prj-title2": "The Wheel",
   "prj-comment2": "Team Project of Front-End Course, made with React.js, Node.js, mySQL",
   "prj-comment2-print": "Dive in the cycling world! A site with cycling news, bicycle products and more!",
-  "prj-title3": "Under Construction",
-  "prj-comment3": "Work, work!",
+  "prj-title3": "youbikeSearch",
+  "prj-comment3": "Get information of rental bike in Taipei city. Made with OpenLayer API, YouBike API, Bootstrap.",
+  "prj-comment3-print": "Get status of available bikes at each station with keyword search feature.",
+  "prj-title0": "Under Construction",
+  "prj-comment0": "Work, work!",
 
   "title-technical-skills": "TECHNICAL<br>SKILLS",
 

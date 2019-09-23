@@ -668,14 +668,18 @@ ul {
 }
 
 .card .card-img-1 {
-  background-image: url("../img/my-resume.png");
+  background-image: url("/img/my-resume.png");
 }
 
 .card .card-img-2 {
-  background-image: url("../img/the-wheel.png");
+  background-image: url("/img/the-wheel.png");
 }
 
 .card .card-img-3 {
+  background-image: url("/img/youbikeSearch.png");
+}
+
+.card .card-img-0 {
   background-image: url("https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80");
 }
 
