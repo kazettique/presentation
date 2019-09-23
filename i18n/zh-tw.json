@@ -46,7 +46,7 @@
   "prj-title2": "The Wheel",
   "prj-comment2": "前端課程的小組專題，使用React.js、Node.js、mySQL等技術",
   "prj-comment2-print": "投入單車的世界！網站有單車資訊、單車商品，還有更多！",
-  "prj-title3":"youbikeSearch",
+  "prj-title3":"youbike search",
   "prj-comment3": "查詢YouBike站點資訊。使用OpenLayer API、YouBike API取得資料，使用Bootstrap做畫面呈現。",
   "prj-comment3-print": "具有搜尋功能，可搜尋站台的目前狀態，包含：可借車量、空車位、位置等資訊。",
   "prj-title0": "世界奇觀建造中",

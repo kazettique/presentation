@@ -46,7 +46,7 @@
   "prj-title2": "The Wheel",
   "prj-comment2": "Team Project of Front-End Course, made with React.js, Node.js, mySQL",
   "prj-comment2-print": "Dive in the cycling world! A site with cycling news, bicycle products and more!",
-  "prj-title3": "youbikeSearch",
+  "prj-title3":"youbike search",
   "prj-comment3": "Get information of rental bike in Taipei city. Made with OpenLayer API, YouBike API, Bootstrap.",
   "prj-comment3-print": "Get status of available bikes at each station with keyword search feature.",
   "prj-title0": "Under Construction",
