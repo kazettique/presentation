@@ -64,7 +64,7 @@ const showResults = (districtSelected, keyword) => {
       showInfo(allData[item])
     }
     // 其他站台為水藍色
-    else setMarkerColor(marker, 'aqua')
+    else setMarkerColor(marker, '#DEFDFF')
 
     markerArr.push(marker)
   }
