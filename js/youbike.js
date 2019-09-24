@@ -16,7 +16,6 @@ let allData
 
 // Click to search
 const handleClick = () => {
-  console.log('click!')
   // Get search filtered condition
   let districtSelected = document.querySelector('#districtMenu').value
   let keyword = document.querySelector('#keyword').value
@@ -96,10 +95,14 @@ const setMarkerColor = (marker, colorCode) => {
 const showInfo = data => {
   if (data !== undefined) {
     let stationBlock = `<div class="stationBlock container-fluid">
-                          <p><span class='stationInfo'>${data.sna}</span></p>
-                          <p>總車數：<span class='stationInfo'>${data.tot}</span></p>
-                          <p>可借車量：<span class='stationInfo'>${data.sbi}</span></p>
-                          <p>空車位：<span class='stationInfo'>${data.bemp}</span></p>
+                          <p>
+                            <span class='stationInfo'><b>${data.sna}</b></span>
+                            <button onclick="flyTo(ol.proj.fromLonLat([${data.lng}, ${data.lat}]))" class="goToBtn btn btn-success">前往</button>
+                          </p>
+                          <p>
+                            <span class='stationInfo'>可借：<b>${data.sbi}</b></span>
+                            <span class='stationInfo'>可還：<b>${data.bemp}</b></span>
+                          </p>
                           <p>位置：<small>${data.sarea} ${data.ar}</small></p>
                         </div>`
     $('#searchResultBlock').append(stationBlock)
@@ -123,6 +126,25 @@ const dataLoading = () => {
   })
 }
 
+const flyTo = location => {
+  var duration = 2000
+  var zoom = 17
+  view.animate({
+    center: location,
+    duration: duration,
+  })
+  view.animate(
+    {
+      zoom: zoom - 3,
+      duration: duration / 2,
+    },
+    {
+      zoom: zoom,
+      duration: duration / 2,
+    }
+  )
+}
+
 // ==== THE END OF FUNCTIONS =====
 
 // Show map on page
@@ -130,14 +152,16 @@ let baseMapLayer = new ol.layer.Tile({
   source: new ol.source.OSM(),
 })
 
+let view = new ol.View({
+  center: ol.proj.fromLonLat([121.5527, 25.0676]),
+  // 以松山機場為中心點
+  zoom: 12,
+})
+
 let map = new ol.Map({
   target: 'map',
   layers: [baseMapLayer],
-  view: new ol.View({
-    center: ol.proj.fromLonLat([121.5527, 25.0676]),
-    // 以松山機場為中心點
-    zoom: 12,
-  }),
+  view: view,
 })
 
 // Initialize marker at the first time

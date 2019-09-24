@@ -82,16 +82,23 @@ body .box .sideNav #searchResultBlock {
 
 body .box .sideNav #searchResultBlock .stationBlock {
   background: #fff;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   padding: 1rem;
   border-top: 1px solid #E8EAED;
   border-bottom: 1px solid #E8EAED;
   color: #70757A;
 }
 
+body .box .sideNav #searchResultBlock .stationBlock p {
+  margin: 0;
+}
+
 body .box .sideNav #searchResultBlock .stationBlock .stationInfo {
-  color: #70757A;
-  font-weight: bold;
+  margin-right: 1rem;
+}
+
+body .box .sideNav #searchResultBlock .stationBlock .goToBtn {
+  float: right !important;
 }
 
 body .modal .loader {

@@ -73,15 +73,22 @@ body {
 
         .stationBlock {
           background: #fff;
-          margin: 0.5rem 0;
+          margin: 1rem 0;
           padding: 1rem;
           border-top: 1px solid $light-gray;
           border-bottom: 1px solid $light-gray;
           color: $gray;
 
+          p {
+            margin: 0;
+          }
+
           .stationInfo {
-            color: $gray;
-            font-weight: bold;
+            margin-right: 1rem;
+          }
+
+          .goToBtn {
+            float: right !important;
           }
         }
       }
