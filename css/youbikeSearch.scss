@@ -88,7 +88,14 @@ body {
           }
 
           .goToBtn {
-            float: right !important;
+            float: right;
+            background: rgb(251, 101, 33);
+            border: none;
+            color: #fff;
+
+            &:hover {
+              background: rgb(206, 83, 27);
+            }
           }
         }
       }

@@ -97,7 +97,7 @@ const showInfo = data => {
     let stationBlock = `<div class="stationBlock container-fluid">
                           <p>
                             <span class='stationInfo'><b>${data.sna}</b></span>
-                            <button onclick="flyTo(ol.proj.fromLonLat([${data.lng}, ${data.lat}]))" class="goToBtn btn btn-success">前往</button>
+                            <button onclick="flyTo(ol.proj.fromLonLat([${data.lng}, ${data.lat}]))" class="goToBtn btn btn-warning">前往</button>
                           </p>
                           <p>
                             <span class='stationInfo'>可借：<b>${data.sbi}</b></span>

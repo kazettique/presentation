@@ -98,7 +98,14 @@ body .box .sideNav #searchResultBlock .stationBlock .stationInfo {
 }
 
 body .box .sideNav #searchResultBlock .stationBlock .goToBtn {
-  float: right !important;
+  float: right;
+  background: #fb6521;
+  border: none;
+  color: #fff;
+}
+
+body .box .sideNav #searchResultBlock .stationBlock .goToBtn:hover {
+  background: #ce531b;
 }
 
 body .modal .loader {
