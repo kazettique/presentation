@@ -27,7 +27,7 @@
       <div class="searchBar">
         <div class="inputArea">
           <select name="taipeiArea" id="districtMenu">
-            <option value="" default>台北市全區</option>
+            <option value="all" default>台北市全區</option>
             <option value="北投區">北投區</option>
             <option value="士林區">士林區</option>
             <option value="中山區">中山區</option>
@@ -43,7 +43,7 @@
           </select>
           <input type="text" placeholder="請輸入地名或路名" id="keyword" class="form-control">
         </div>
-        <button onclick="handleClick()" id="searchBtn" class="btn btn-warning btn-block">查詢</button>
+        <button onclick="searchClick()" id="searchBtn" class="btn btn-warning btn-block">查詢</button>
       </div>
       <div id="searchResultBlock">
       </div>

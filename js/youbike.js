@@ -4,109 +4,136 @@ let allData
 ;(function() {
   fetch('https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json')
     .then(res => res.json())
-    .then(data => {
-      allData = data.retVal
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    .then(data => (allData = data.retVal))
+    .catch(err => console.log(err))
 })()
 
 // ==== START OF FUNCTIONS ====
 
 // Click to search
-const handleClick = () => {
+const searchClick = (selectedStation = '') => {
   // Get search filtered condition
   let districtSelected = document.querySelector('#districtMenu').value
   let keyword = document.querySelector('#keyword').value
-  if (keyword === '') keyword = false
   // Change color of station dot on map according to the condition
-  showResults(districtSelected, keyword)
+  showSearchResult(districtSelected, keyword, selectedStation)
 }
 
 // Function to show all station markers on map
-const showResults = (districtSelected, keyword) => {
+const showSearchResult = (
+  districtSelected = 'all',
+  keyword,
+  selectedStation = ''
+) => {
+  let colorAqua = '#DEFDFF'
+  let colorOrange = 'rgb(251,101,33)'
   // Clean all contents in sideNav
   emptyDiv()
   // Array for markers
   let markerArr = []
+  // ------- For test use ------
+  let x = 0
+  let y = 0
+  // ---------------------------
   // Push all geoLocations of stations into array
   for (let item in allData) {
     // Transform data type to meet Open Layer's need
-    let lon = parseFloat(allData[item].lng)
+    let lng = parseFloat(allData[item].lng)
     let lat = parseFloat(allData[item].lat)
+    // Generate a new marker
     let marker = new ol.Feature({
-      geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat])),
+      geometry: new ol.geom.Point(ol.proj.fromLonLat([lng, lat])),
     })
-
     // Condition initialization
     let conditionDistrict = false
     let conditionKeyword = false
-    // 在站台名稱找到相同關鍵字
+    let condition = false
+    // Get keyword from station name
     let snaKeywordFound = allData[item].sna.search(keyword)
-    // 在地址裡找到相同關鍵字
+    // Get keyword from address
     let arKeywordFound = allData[item].ar.search(keyword)
-    // 如果有找到相同關鍵字，上色條件改為'true'
+    // Get keyword from district
+    let sareaKeywordFound = allData[item].sarea.search(keyword)
+    // If keyword is found, set condition to 'true'
+    // Keyword not found: -1
+    // Keyword not input: 0 (namely, no keyword condition)
     if (
-      // 找不到關鍵字：-1
-      (snaKeywordFound !== -1 && snaKeywordFound !== false) ||
-      (arKeywordFound !== -1 && arKeywordFound !== false)
+      snaKeywordFound !== -1 ||
+      snaKeywordFound === 0 ||
+      arKeywordFound !== -1 ||
+      arKeywordFound === 0 ||
+      sareaKeywordFound !== -1 ||
+      sareaKeywordFound === 0
     )
       conditionKeyword = true
 
-    // 如果有設定地區條件限制，上色條件改為'true'
-    if (districtSelected === allData[item].sarea || districtSelected === '')
+    // If district selection is selected, set condition to 'true'
+    if (districtSelected === allData[item].sarea || districtSelected === 'all')
       conditionDistrict = true
 
-    // 站台上色，符合條件為橘色
+    // GATHERING ALL DOTS!!! WATCH OUT FOR CONDITIONS!!
+    // Show others stations with aqua dots
     if (conditionDistrict && conditionKeyword) {
-      setMarkerColor(marker, 'rgb(251,101,33)')
+      if (allData[item].sno === selectedStation) {
+        setMarkerColor(marker, colorOrange, 1)
+      } else setMarkerColor(marker, colorAqua, 0.7)
+
       showInfo(allData[item])
+      markerArr.push(marker)
     }
-    // 其他站台為水藍色
-    else setMarkerColor(marker, '#DEFDFF')
-
-    markerArr.push(marker)
   }
-
-  let tempObj = { features: markerArr }
+  // ------- For test use ------
+  // console.log('x: ' + x)
+  // console.log('y: ' + y)
+  // ---------------------------
+  let layerName = 'markers'
+  // remove the old marker layer first
+  removeMapLayer(layerName)
+  let tempObj = { features: markerArr } // tempObj is an ARRAY
   let vectorSource = new ol.source.Vector(tempObj)
   let markerVectorLayer = new ol.layer.Vector({
     source: vectorSource,
+    name: layerName,
   })
-  // 將生成的點加入地圖
+  // Generate new marker layer
   map.addLayer(markerVectorLayer)
+  // console.log(map.getLayersByName(markerVectorLayer))
 }
 
 // 站台上色
-const setMarkerColor = (marker, colorCode) => {
+const setMarkerColor = (marker, colorCode, dotSize = 0.4) => {
   marker.setStyle(
     new ol.style.Style({
       image: new ol.style.Icon({
         color: colorCode,
         crossOrigin: 'anonymous',
         src: '/img/dot.png',
-        scale: 0.4,
+        scale: dotSize,
       }),
     })
   )
 }
 
 const showInfo = data => {
+  let stationBlock = ''
   if (data !== undefined) {
-    let stationBlock = `<div class="stationBlock container-fluid">
-                          <p>
-                            <span class='stationInfo'><b>${data.sna}</b></span>
-                            <button onclick="flyTo(ol.proj.fromLonLat([${data.lng}, ${data.lat}]))" class="goToBtn btn btn-warning">前往</button>
-                          </p>
-                          <p>
-                            <span class='stationInfo'>可借：<b>${data.sbi}</b></span>
-                            <span class='stationInfo'>可還：<b>${data.bemp}</b></span>
-                          </p>
-                          <p>位置：<small>${data.sarea} ${data.ar}</small></p>
-                        </div>`
-    $('#searchResultBlock').append(stationBlock)
-  } else $('#searchResultBlock').append('無搜尋結果')
+    stationBlock = `
+    <div class="stationBlock container-fluid">
+      <p>
+        <span class='stationInfo'><b>${data.sna}</b></span>
+        <button 
+          onclick="flyTo('${data.sno}',${data.lng},${data.lat})"
+          class="goToBtn btn btn-warning">前往</button>
+      </p>
+      <p>
+        <span class='stationInfo'>可借：<b>${data.sbi}</b></span>
+        <span class='stationInfo'>可還：<b>${data.bemp}</b></span>
+      </p>
+      <p>位置：<small>${data.sarea} ${data.ar}</small></p>
+    </div>`
+    // ANCHOR not show message here
+  } else stationBlock = '<h3>無搜尋結果</h3>'
+  $('#searchResultBlock').append(stationBlock)
 }
 
 const emptyDiv = () => $('#searchResultBlock').empty()
@@ -114,50 +141,73 @@ const emptyDiv = () => $('#searchResultBlock').empty()
 const dataLoading = () => {
   // Thanks for this codePen!!
   // https://codepen.io/luv2code/pen/evaBXm
-  $(document).ready(function() {
+  $(document).ready(() => {
     $('#loadMe').modal({
       backdrop: 'static', //remove ability to close modal with click
       keyboard: false, //remove option to close with keyboard
       show: true, //Display loader!
     })
-    setTimeout(function() {
-      $('#loadMe').modal('hide')
-    }, 1500)
+    setTimeout(() => $('#loadMe').modal('hide'), 1500)
   })
 }
 
-const flyTo = location => {
-  var duration = 2000
-  var zoom = 17
-  view.animate({
-    center: location,
-    duration: duration,
-  })
+const flyTo = (sno = '', geoLng = mapCenterLng, geoLat = mapCenterLng) => {
+  let location = ol.proj.fromLonLat([geoLng, geoLat])
+  let duration = 2000
+  let zoom = 17
+  view.animate({ center: location, duration: duration })
+  // Paint the dots!
+  searchClick(sno)
+
+  // Flying animation
   view.animate(
-    {
-      zoom: zoom - 3,
-      duration: duration / 2,
-    },
-    {
-      zoom: zoom,
-      duration: duration / 2,
-    }
+    { zoom: zoom - 3, duration: duration / 2 },
+    { zoom: zoom, duration: duration / 2 }
   )
+}
+
+const showBikeIcon = (geoLng, geoLat) => {
+  console.log('enter show bike')
+  let layerName = 'image'
+
+  let increment = 0.001
+  let north = geoLat + increment
+  let south = geoLat
+  let east = geoLng - increment / 2
+  let west = geoLng + increment / 2
+  let extent = ol.proj.transformExtent(
+    [east, north, west, south],
+    'EPSG:4326',
+    'EPSG:3857'
+  )
+  let image = new ol.source.ImageStatic({
+    url: '/img/youbike-icon2.svg',
+    imageExtent: extent,
+  })
+  let imageLayer = new ol.layer.Image({ source: image, name: layerName })
+  console.log(layerName)
+  removeMapLayer(layerName)
+  map.addLayer(imageLayer)
+}
+
+const removeMapLayer = layerName => {
+  map.getLayers().forEach(function(layer) {
+    if (layer.get('name') == layerName) map.removeLayer(layer)
+  })
 }
 
 // ==== THE END OF FUNCTIONS =====
 
-// Show map on page
-let baseMapLayer = new ol.layer.Tile({
-  source: new ol.source.OSM(),
-})
+let mapCenterLng = 121.5527
+let mapCenterLat = 25.0676
 
+// Show map on page
+let baseMapLayer = new ol.layer.Tile({ source: new ol.source.OSM() })
 let view = new ol.View({
-  center: ol.proj.fromLonLat([121.5527, 25.0676]),
+  center: ol.proj.fromLonLat([mapCenterLng, mapCenterLat]),
   // 以松山機場為中心點
   zoom: 12,
 })
-
 let map = new ol.Map({
   target: 'map',
   layers: [baseMapLayer],
@@ -165,6 +215,10 @@ let map = new ol.Map({
 })
 
 // Initialize marker at the first time
-setTimeout(() => showResults(), 1000)
+setTimeout(() => showSearchResult(), 1000)
 
 dataLoading()
+
+$('#keyword').keypress(e => {
+  if (e.which == 13) $('#searchBtn').click()
+})
