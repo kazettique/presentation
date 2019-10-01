@@ -1,14 +1,14 @@
 // Youbike API: https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json
 let allData
-  // All data initialization
-;(function() {
+
+// ==== START OF FUNCTIONS ====
+// Get all data from API
+const fetchData = () => {
   fetch('https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json')
     .then(res => res.json())
     .then(data => (allData = data.retVal))
     .catch(err => console.log(err))
-})()
-
-// ==== START OF FUNCTIONS ====
+}
 
 // Click to search
 const searchClick = (selectedStation = '') => {
@@ -32,8 +32,8 @@ const showSearchResult = (
   // Array for markers
   let markerArr = []
   // ------- For test use ------
-  let x = 0
-  let y = 0
+  // let x = 0
+  // let y = 0
   // ---------------------------
   // Push all geoLocations of stations into array
   for (let item in allData) {
@@ -47,7 +47,6 @@ const showSearchResult = (
     // Condition initialization
     let conditionDistrict = false
     let conditionKeyword = false
-    let condition = false
     // Get keyword from station name
     let snaKeywordFound = allData[item].sna.search(keyword)
     // Get keyword from address
@@ -77,7 +76,6 @@ const showSearchResult = (
       if (allData[item].sno === selectedStation) {
         setMarkerColor(marker, colorOrange, 1)
       } else setMarkerColor(marker, colorAqua, 0.7)
-
       showInfo(allData[item])
       markerArr.push(marker)
     }
@@ -87,7 +85,7 @@ const showSearchResult = (
   // console.log('y: ' + y)
   // ---------------------------
   let layerName = 'markers'
-  // remove the old marker layer first
+  // Remove the old marker layer first
   removeMapLayer(layerName)
   let tempObj = { features: markerArr } // tempObj is an ARRAY
   let vectorSource = new ol.source.Vector(tempObj)
@@ -97,10 +95,9 @@ const showSearchResult = (
   })
   // Generate new marker layer
   map.addLayer(markerVectorLayer)
-  // console.log(map.getLayersByName(markerVectorLayer))
 }
 
-// 站台上色
+// Colorize the marker
 const setMarkerColor = (marker, colorCode, dotSize = 0.4) => {
   marker.setStyle(
     new ol.style.Style({
@@ -115,9 +112,7 @@ const setMarkerColor = (marker, colorCode, dotSize = 0.4) => {
 }
 
 const showInfo = data => {
-  let stationBlock = ''
-  if (data !== undefined) {
-    stationBlock = `
+  let stationBlock = `
     <div class="stationBlock container-fluid">
       <p>
         <span class='stationInfo'><b>${data.sna}</b></span>
@@ -129,10 +124,8 @@ const showInfo = data => {
         <span class='stationInfo'>可借：<b>${data.sbi}</b></span>
         <span class='stationInfo'>可還：<b>${data.bemp}</b></span>
       </p>
-      <p>位置：<small>${data.sarea} ${data.ar}</small></p>
+      <p>位置：<small><b>${data.sarea}</b> ${data.ar}</small></p>
     </div>`
-    // ANCHOR not show message here
-  } else stationBlock = '<h3>無搜尋結果</h3>'
   $('#searchResultBlock').append(stationBlock)
 }
 
@@ -153,12 +146,11 @@ const dataLoading = () => {
 
 const flyTo = (sno = '', geoLng = mapCenterLng, geoLat = mapCenterLng) => {
   let location = ol.proj.fromLonLat([geoLng, geoLat])
-  let duration = 2000
+  let duration = 3500
   let zoom = 17
   view.animate({ center: location, duration: duration })
   // Paint the dots!
   searchClick(sno)
-
   // Flying animation
   view.animate(
     { zoom: zoom - 3, duration: duration / 2 },
@@ -166,10 +158,10 @@ const flyTo = (sno = '', geoLng = mapCenterLng, geoLat = mapCenterLng) => {
   )
 }
 
+// Haven't used yet
 const showBikeIcon = (geoLng, geoLat) => {
   console.log('enter show bike')
   let layerName = 'image'
-
   let increment = 0.001
   let north = geoLat + increment
   let south = geoLat
@@ -185,19 +177,19 @@ const showBikeIcon = (geoLng, geoLat) => {
     imageExtent: extent,
   })
   let imageLayer = new ol.layer.Image({ source: image, name: layerName })
-  console.log(layerName)
   removeMapLayer(layerName)
   map.addLayer(imageLayer)
 }
 
 const removeMapLayer = layerName => {
-  map.getLayers().forEach(function(layer) {
+  map.getLayers().forEach(layer => {
     if (layer.get('name') == layerName) map.removeLayer(layer)
   })
 }
 
 // ==== THE END OF FUNCTIONS =====
-
+// Set center of map
+// 設定松山機場為中心點
 let mapCenterLng = 121.5527
 let mapCenterLat = 25.0676
 
@@ -205,7 +197,6 @@ let mapCenterLat = 25.0676
 let baseMapLayer = new ol.layer.Tile({ source: new ol.source.OSM() })
 let view = new ol.View({
   center: ol.proj.fromLonLat([mapCenterLng, mapCenterLat]),
-  // 以松山機場為中心點
   zoom: 12,
 })
 let map = new ol.Map({
@@ -213,6 +204,11 @@ let map = new ol.Map({
   layers: [baseMapLayer],
   view: view,
 })
+
+// Get data the first time
+fetchData()
+// Get data from API with 5min interval
+setInterval(fetchData(), 5 * 60 * 1000)
 
 // Initialize marker at the first time
 setTimeout(() => showSearchResult(), 1000)
