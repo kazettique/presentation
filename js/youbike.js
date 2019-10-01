@@ -17,6 +17,7 @@ const searchClick = (selectedStation = '') => {
   let keyword = document.querySelector('#keyword').value
   // Change color of station dot on map according to the condition
   showSearchResult(districtSelected, keyword, selectedStation)
+  return false
 }
 
 // Function to show all station markers on map
@@ -216,5 +217,6 @@ setTimeout(() => showSearchResult(), 1000)
 dataLoading()
 
 $('#keyword').keypress(e => {
+  e.preventDefault()
   if (e.which == 13) $('#searchBtn').click()
 })
