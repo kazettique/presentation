@@ -3,7 +3,7 @@
   "name": "張皓涵",
   "full-name": "姓名：",
   "qrCode-txt": "掃描一下!",
-  "printMsg":"列印此頁面！",
+  "printMsg": "列印此頁面！",
 
   "title-education": "學歷",
 
@@ -23,6 +23,11 @@
   "ncku-content": "<li>大學期間學習過FORTRAN, C</li><li>船舶必修課程利用VBA做船體分析及圖表呈現</li><li>學習船舶設計相關知識</li>",
 
   "title-work-experience": "工作經歷",
+
+  "cloud-job": "前端工程師",
+  "cloud": "雲端互動",
+  "cloud-location": "台灣，台北",
+  "cloud-content": "<li>前端網頁開發</li>",
 
   "soic-job": "輪機工程師",
   "soic": "財團法人船舶暨海洋產業研發中心",
@@ -46,7 +51,7 @@
   "prj-title2": "The Wheel",
   "prj-comment2": "前端課程的小組專題，使用React.js、Node.js、mySQL等技術",
   "prj-comment2-print": "投入單車的世界！網站有單車資訊、單車商品，還有更多！",
-  "prj-title3":"youbike search",
+  "prj-title3": "youbike search",
   "prj-comment3": "查詢YouBike站點資訊。使用OpenLayer API、YouBike API取得資料，使用Bootstrap做畫面呈現。",
   "prj-comment3-print": "具有搜尋功能，可搜尋站台的目前狀態，包含：可借車量、空車位、位置等資訊。",
   "prj-title0": "世界奇觀建造中",
