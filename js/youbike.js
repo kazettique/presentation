@@ -220,3 +220,11 @@ $('#keyword').keypress(e => {
   e.preventDefault()
   if (e.which == 13) $('#searchBtn').click()
 })
+
+// Dropdown search result block collapse/fold toggle
+const collapseFoldSearchResult = () => {
+  $('#drop-down-icon').toggleClass('fa-rotate-180')
+  // $('#searchResultBlock').toggleClass('collapse')
+  // $('.sideNav').height('80vh')
+  // $('.sideNav').slideToggle()
+}
