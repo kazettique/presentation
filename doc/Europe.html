@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+  <script>
+    google.charts.load('current', {
+      'packages': ['geochart'],
+      // Note: you will need to get a mapsApiKey for your project.
+      // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+      'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+    });
+    google.charts.setOnLoadCallback(drawVisualization);
+
+    function drawVisualization() {
+      var data = google.visualization.arrayToDataTable([
+        ['State', 'Clicks'],
+        ['GB', 200],
+        ['FR', 300],
+        ['DE', 500],
+        ['NO', 350],
+        ['PL', 50],
+        ['IT', 450],
+        ['ES', 250],
+        ['CZ', 20],
+      ]);
+      var geochart = new google.visualization.GeoChart(
+        document.getElementById('visualization'));
+      geochart.draw(data, { width: 556, height: 347, region: "150", resolution: "countries" });
+    }
+  </script>
+  <title>Chart Test 5</title>
+</head>
+
+<body>
+  <div id="visualization" style="width: 900px; height: 500px;"></div>
+</body>
+
+</html>

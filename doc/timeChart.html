@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <script src="../js/timeChart.js"></script>
+  <link rel="stylesheet" href="../css//timeChart.css">
+
+  <title>Chart Test</title>
+</head>
+
+<body>
+  <div id="dashboard">
+    <div id="range-buttons">
+      <!-- <span>Zoom:&nbsp;</span> -->
+      <!-- <button class="ui-button ui-widget ui-corner-all" data-range="3600000">1hour</button> -->
+      <button class="ui-button ui-widget ui-corner-all" data-range="86400000">1day</button>
+      <!-- <button class="ui-button ui-widget ui-corner-all" data-range="432000000">5days</button> -->
+      <button class="ui-button ui-widget ui-corner-all" data-range="604800000">1week</button>
+      <button class="ui-button ui-widget ui-corner-all" data-range="2592000000">1month</button>
+      <button class="ui-button ui-widget ui-corner-all" data-range="7776000000">3months</button>
+      <button class="ui-button ui-widget ui-corner-all" data-range="15552000000">6months</button>
+      <button class="ui-button ui-widget ui-corner-all" data-range="31104000000">1year</button>
+      <button class="ui-button ui-widget ui-corner-all">All</button>
+    </div>
+    <div id="chart-area"></div>
+    <div id="chart-area2"></div>
+    <div id="filter-range"></div>
+  </div>
+</body>
+
+</html>
